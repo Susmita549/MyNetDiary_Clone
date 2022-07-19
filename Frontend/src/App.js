@@ -21,6 +21,7 @@ import Library from './pages/Library';
 import Diets from './pages/Diets';
 import Plan from './pages/Plan';
 import Food from './pages/Food';
+import Dashboard from './pages/Dashboard';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/diets" element={<Diets />} />
           <Route path="/plan" element={<Plan />} />
           <Route path="/food" element={<Food />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           
         </Routes>
         <Footer />
