@@ -19,6 +19,9 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Library from './pages/Library';
 import Diets from './pages/Diets';
+import Plan from './pages/Plan';
+import Food from './pages/Food';
+
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/library" element={<Library />} />
           <Route path="/diets" element={<Diets />} />
+          <Route path="/plan" element={<Plan />} />
+          <Route path="/food" element={<Food />} />
+          
         </Routes>
         <Footer />
       </Box>
