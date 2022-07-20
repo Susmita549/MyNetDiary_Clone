@@ -50,6 +50,7 @@ const Footer = () => {
             lineHeight="25px"
             p="15px"
           >
+            <ul>
             <Text fontSize="14px">
               <li>Success stories</li>
             </Text>
@@ -71,6 +72,7 @@ const Footer = () => {
             <Text fontSize="14px">
               <li>Diabetes and health tracking</li>
             </Text>
+            </ul>
           </Flex>
 
           <Flex
@@ -119,13 +121,13 @@ const Footer = () => {
             p="15px"
           >
             <Text fontSize="14px">
-              <li>Gift cards & Group discounts</li>
+              <li>Gift cards & Group</li>
             </Text>
             <Text fontSize="14px">
               <li>For trainers</li>
             </Text>
             <Text fontSize="14px">
-              <li>For healthcare professionals</li>
+              <li>Healthcare professionals</li>
             </Text>
             <Text fontSize="14px">
               <li>For families</li>
