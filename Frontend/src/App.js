@@ -2,25 +2,20 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import Library from './pages/Library';
-import Diets from './pages/Diets';
-import Plan from './pages/Plan';
-import Food from './pages/Food';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
+// import { Logo } from './Logo';
+// import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
+// import { Route, Routes } from 'react-router-dom';
+// import Home from './pages/Home';
+// import SignIn from './pages/SignIn';
+// import SignUp from './pages/SignUp';
+// import Library from './pages/Library';
+// import Diets from './pages/Diets';
+// import Plan from './pages/Plan';
+// import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
 
 
@@ -28,7 +23,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Navbar />
+        {/* <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
@@ -39,8 +34,9 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/dashboard" element={<Dashboard />} />
           
-        </Routes>
-        <Footer />
+        </Routes> */}
+        <Dashboard/>
+        {/* <Footer /> */}
       </Box>
     </ChakraProvider>
   );
