@@ -19,6 +19,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Library from './pages/Library';
 import Diets from './pages/Diets';
+import Chakraui from './pages/Chakraui';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/library" element={<Library />} />
           <Route path="/diets" element={<Diets />} />
+          <Route path="/chakra" element={<Chakraui />} />
         </Routes>
         <Footer />
       </Box>

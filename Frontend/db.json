@@ -1,0 +1,157 @@
+{
+  "dietsLibrary": {
+    "category": "Diet Library",
+    "caloriesCounting": {
+      "subCategory": "Calorie Counting Library",
+      "message": "The articles below discuss Nutrition, Weight Control, Diabetes and provide valuable tips on using MyNetDiary apps for losing weight healthily.",
+      "section": [
+        {
+          "heading": "Planning Weight, Calories & Nutrients",
+          "data": [
+            {
+              "id": 1,
+              "href": "https://www.mynetdiary.com/planning_weight_and_calories.html",
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/planning-weight-and-calories.jpg",
+              "name": "Planning weight & calories",
+              "description": "Discover how calories planning works at MyNetDiary to help you reach your weight goal."
+            },
+            {
+              "id": 2,
+              "href": "https://www.mynetdiary.com/personalized-nutrition-plan.html",
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/planning_your_nutrient_needs.jpg",
+              "name": "Planning your nutrient needs",
+              "description": "Learn where the recommended macronutrient, vitamin, and mineral goals come from and how to change them if needed."
+            }
+          ]
+        },
+        {
+          "heading": "Weight Loss & Maintenance",
+          "data": [
+            {
+              "id": 3,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/4-tips-for-choosing-a-weight-loss-diet-that-works-for-you.jpeg",
+              "name": "4 Tips for Choosing a Weight Loss Diet That Works for You",
+              "href": "https://www.mynetdiary.com/4-tips-for-choosing-a-weight-loss-diet-that-works-for-you.html",
+              "description": "Tips on how to select a diet that is safe and works well for you."
+            },
+            {
+              "id": 4,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/hidden-cues-to-eating.jpeg",
+              "name": "Hidden Cues To Eating",
+              "href": "https://www.mynetdiary.com/hidden-cues-to-eating.html",
+              "description": "Learn what drives us to overeat and what you can do about it."
+            },
+            {
+              "id": 5,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/why-am-i-not-losing-weight.jpeg",
+              "name": "Why am I Not Losing Weight?",
+              "href": "https://www.mynetdiary.com/why-am-i-not-losing-weight.html",
+              "description": "This article explains why you might have stopped losing weight and offers tips for breaking the plateau."
+            },
+            {
+              "id": 6,
+              "imgUrl": "http://s3.amazonaws.com/img.mynetdiary.com/src/article/weight-loss-maintenance.jpeg",
+              "name": "Weight Loss Maintenance",
+              "href": "https://www.mynetdiary.com/weight-loss-maintenance.html",
+              "description": "Congratulations, you have achieved your weight goal! Now what do you do?"
+            }
+          ]
+        },
+        {
+          "heading": "Nutrition Basics",
+          "data": [
+            {
+              "id": 7,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/fats.jpeg",
+              "name": "Dietary fats",
+              "href": "https://www.mynetdiary.com/dietary-fats.html",
+              "description": "Learn about different types of fats and how to make healthier food choices."
+            },
+            {
+              "id": 8,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/blog/3-types-of-carbohydrate.jpeg",
+              "name": "Carbohydrates: Starch, sugar, and fiber",
+              "href": "https://www.mynetdiary.com/3-types-of-carbohydrate.html",
+              "description": "This article describes what carbohydrates are and how to make healthier carb choices."
+            },
+            {
+              "id": 9,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/src/article/the-benefits-of-eating-protein.jpeg",
+              "name": "The benefits of eating protein",
+              "href": "https://www.mynetdiary.com/benefits-of-eating-protein.html",
+              "description": "Learn about animal and plant sources of protein and how to make smart choices if you are trying to lose weight."
+            },
+            {
+              "id": 10,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/blog/foods-for-good-nutrition.jpeg",
+              "name": "Foods for good nutrition",
+              "href": "https://www.mynetdiary.com/foods-for-good-nutrition.html",
+              "description": "This article describes how our nutrient needs are met by food choices."
+            },
+            {
+              "id": 11,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/blog/how-much-should-you-drink.jpeg",
+              "name": "How to figure out how much water you should drink plus an easy way to track it.",
+              "href": "https://www.mynetdiary.com/how-much-should-you-drink.html",
+              "description": "Eight glasses of water�is that really how much you should drink every day? Read on to learn about the factors impacting water needs, how much, how often, and how to know if you�re on target."
+            }
+          ]
+        },
+        {
+          "heading": "Nutrition Basics",
+          "data": []
+        }
+      ]
+    }
+  },
+  "dietitian-Team": {
+    "category": "Dietitian Team",
+    "dietitian-Team": {
+      "subCategory": "",
+      "message": "",
+      "section": [
+        {
+          "heading": "",
+          "data": [
+            {
+              "id": 1,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/author/author-sue-heikkinen.jpg",
+              "name": "Sue Heikkinen",
+              "href": "https://www.mynetdiary.com/bio-sheikkinen.html",
+              "specialist": "MS, RD, CDCES, BC-ADM, ACE-PT",
+              "para1": "Registered Dietitian Nutritionist and Certified Diabetes Care and Education Specialist",
+              "description": "20+ years experience providing nutrition counseling and education for wellness and medical conditions"
+            },
+            {
+              "id": 2,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/author/author-brenda-braslow.jpg",
+              "name": "Brenda Braslow",
+              "href": "https://www.mynetdiary.com/bio-bbraslow.html",
+              "specialist": "MS, RDN, LDN, CDCES",
+              "para1": "Registered Dietitian Nutritionist and Certified Diabetes Care and Education Specialist",
+              "description": "30+ years of work experience in many areas including wellness, diabetes, respiratory, immunology, and allergy medicine."
+            },
+            {
+              "id": 3,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/author/author-joanna-kriehn.jpg",
+              "name": "Joanna Kriehn",
+              "href": "https://www.mynetdiary.com/bio-kriehn.html",
+              "specialist": "MS, RDN, CDCES",
+              "para1": "Registered Dietitian Nutritionist and Certified Diabetes Care and Education Specialist",
+              "description": "20+ years of experience in human research, weight management, diabetes education, sports nutrition and wellness."
+            },
+            {
+              "id": 4,
+              "imgUrl": "https://s3.amazonaws.com/img.mynetdiary.com/author/author-katherine-isacks.jpg",
+              "name": "Katherine Isacks",
+              "href": "https://www.mynetdiary.com/bio-kisacks.html",
+              "specialist": "MPS, RDN, CDCES",
+              "para1": "Registered Dietitian Nutritionist and Certified Diabetes Care and Education Specialist",
+              "description": "14+ years experience working in weight management, diabetes management, cardiovascular disease, and wellness."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
