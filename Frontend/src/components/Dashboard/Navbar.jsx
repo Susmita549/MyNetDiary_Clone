@@ -18,8 +18,8 @@ const Navbar = () => {
         p="8px"
         color="rgb(255, 255, 255)"
       >
-        <Flex  h="50%" w="80%" m="auto" >
-          <Box  w="20%">
+        <Flex h="50%"  maxW={'1170px'} m="auto">
+          <Box w="20%">
             <img
               src="https://s3.amazonaws.com/img.mynetdiary.com/logo_react.png"
               alt="logo"
@@ -27,40 +27,51 @@ const Navbar = () => {
             />
           </Box>
 
-          <Flex  h='100%' w="30%" m="auto" justifyContent='space-between' alignItems='center'>
-            <Box  h='80%' w='12%'>
-            <Image
+          <Flex
+            h="100%"
+            w="30%"
+            m="auto"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box h="80%" w="12%">
+              <Image
                 boxSize="100%"
                 src="https://www.mynetdiary.com/img/icon/date_range_gray.png"
                 alt="calender"
               />
             </Box>
-            <Flex  h='80%' w='80%' justifyContent='space-between' alignItems='center'>
-              <Box  h='80%' w='5%'>
-              <Image
-                h='100%'
-                w='100%'
-                src="https://s3.amazonaws.com/img.mynetdiary.com/left.png"
-                alt="left arrow"
-              />
+            <Flex
+              h="80%"
+              w="80%"
+              justifyContent="space-between"
+              alignItems="center"
+            >
+              <Box h="80%" w="5%">
+                <Image
+                  h="100%"
+                  w="100%"
+                  src="https://s3.amazonaws.com/img.mynetdiary.com/left.png"
+                  alt="left arrow"
+                />
               </Box>
-              <Box  h='80%' w='40%'>
-              <Text fontSize="2xl" align="center">
-                Today
-              </Text>
+              <Box h="80%" w="40%">
+                <Text fontSize="2xl" align="center">
+                  Today
+                </Text>
               </Box>
-              <Box  h='80%' w='5%'>
-              <Image
-                h='100%'
-                w='100%'
-                src="https://s3.amazonaws.com/img.mynetdiary.com/right.png"
-                alt="right arrow"
-              />
+              <Box h="80%" w="5%">
+                <Image
+                  h="100%"
+                  w="100%"
+                  src="https://s3.amazonaws.com/img.mynetdiary.com/right.png"
+                  alt="right arrow"
+                />
               </Box>
             </Flex>
           </Flex>
 
-          <Box  w="20%">
+          <Box w="20%">
             <Flex h="80%" w="80%" m="5px ">
               <Image
                 h="100%"
@@ -74,11 +85,10 @@ const Navbar = () => {
         </Flex>
         <Flex
           justifyContent="space-between"
-          w="75%"
+          maxW={'1170px'}
           m="auto"
           alignItems="end"
           h="50%"
-         
         >
           <Text fontSize="sm" fontWeight="bold">
             DASHBOARD
@@ -108,5 +118,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
