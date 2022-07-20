@@ -24,10 +24,3 @@ authRouter.post('/login', async (req, res) => {
 });
 
 module.exports = authRouter;
-
-// "gender":"male",
-// "date":"05/02/1994",
-// "height":23,
-// "curWeight":51,
-// "targetWeight":56,
-// "progress":4
