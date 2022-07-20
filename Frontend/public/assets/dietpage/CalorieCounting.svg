@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 93 132" width="24" height="24" class="ml-n5 mr-2">
+    <defs>
+        <filter filterUnits="userSpaceOnUse" id="Filter_diet_nav_4" x="1.5px" y="1.5px" width="90px" height="129px">
+            <feOffset in="SourceAlpha" dx="0" dy="7"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+
+    </defs>
+    <g filter="url(#Filter_diet_nav_4)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(255, 132, 89)" d="M56.767,121.556 C47.636,107.407 65.667,84.787 65.667,84.787 C65.667,84.787 64.183,83.728 57.985,86.413 C55.512,87.485 53.479,88.881 51.795,90.450 C52.700,88.390 53.808,86.234 55.155,83.973 C65.849,66.019 51.240,48.526 51.920,51.039 C53.329,56.238 47.945,66.896 41.812,72.182 C37.330,76.046 27.796,82.686 27.257,93.325 C26.615,106.000 34.534,116.758 39.104,121.863 C36.715,121.441 34.478,120.848 32.392,120.093 C32.144,120.084 31.796,119.982 31.300,119.754 C30.935,119.586 30.593,119.410 30.237,119.239 C28.988,118.690 27.801,118.076 26.672,117.403 C2.452,103.909 2.272,82.411 10.089,67.623 C15.004,58.325 23.412,51.551 25.175,37.582 C26.086,30.356 25.377,24.820 25.377,24.820 C34.688,29.769 35.869,39.713 35.888,45.704 C38.006,43.218 39.899,40.614 41.369,37.816 C50.139,21.121 34.903,5.921 36.448,5.635 C47.948,3.512 73.847,26.597 75.670,52.361 C75.705,58.867 74.764,67.125 70.893,74.329 C70.264,75.500 77.121,73.806 81.474,60.949 C83.427,64.331 85.524,70.572 86.885,78.042 C90.752,99.265 75.872,117.146 56.767,121.556 Z"></path>
+    </g>
+</svg>
