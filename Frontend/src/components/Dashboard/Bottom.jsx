@@ -15,8 +15,8 @@ const Bottom = () => {
         >
         
 
-          <div class="middle__bottom" style={{padding:"20px"}}>
-            <div class="bottom__first">
+          <div className="middle__bottom" style={{padding:"20px"}}>
+            <div className="bottom__first">
               <Image
                 style={{ height: '40px', marginRight: ' 10px' }}
                 src="https://s3.amazonaws.com/img.mynetdiary.com/dashboard/icon_heart_rate.png"
@@ -28,8 +28,8 @@ const Bottom = () => {
               />
             </div>
             
-            <div class="bottom__second">
-              <div class="bottom__second__left">
+            <div className="bottom__second">
+              <div className="bottom__second__left">
                 <p>Daily Steps</p>
                 <div>
                   <h4 style={{ color: 'grey' }}>no target</h4>
@@ -37,7 +37,7 @@ const Bottom = () => {
                 </div>
                 
               </div>
-              <div class="bottom__second__right">
+              <div className="bottom__second__right">
                 <p>Heart Rate</p>
                 <div>
                   <h4 style={{ color: 'grey' }}>no target</h4>
