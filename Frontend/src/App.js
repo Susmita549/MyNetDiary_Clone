@@ -26,9 +26,9 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
-          {/* <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/library" element={<Library />} />
@@ -37,13 +37,12 @@ function App() {
           <Route path="/chakra" element={<Chakraui />} />
 
           <Route path="/plan" element={<Plan />} />
-          <Route path="/food" element={<Food />} /> */}
+          <Route path="/food" element={<Food />} />
           <Route path="/dashboard" element={<Dashboard />} />
           
 
         </Routes>
-        {/* <Dashboard/> */}
-        {/* <Footer /> */}
+        <Footer />
       </Box>
     </ChakraProvider>
   );
