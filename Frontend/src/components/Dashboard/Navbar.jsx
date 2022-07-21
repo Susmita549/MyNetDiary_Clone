@@ -8,7 +8,11 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
+// import Calendar from 'react-calendar';
+// import 'react-calendar/dist/Calendar.css';
+import { useState } from 'react';
 const Navbar = () => {
+  // const [value, onChange] = useState(new Date());
   return (
     <div>
       <Container
@@ -18,7 +22,7 @@ const Navbar = () => {
         p="8px"
         color="rgb(255, 255, 255)"
       >
-        <Flex h="50%"  maxW={'1170px'} m="auto">
+        <Flex h="50%" maxW={'1170px'} m="auto">
           <Box w="20%">
             <img
               src="https://s3.amazonaws.com/img.mynetdiary.com/logo_react.png"
@@ -40,6 +44,9 @@ const Navbar = () => {
                 src="https://www.mynetdiary.com/img/icon/date_range_gray.png"
                 alt="calender"
               />
+              {/* <Box>
+                <Calendar onChange={onChange} value={value} />
+              </Box> */}
             </Box>
             <Flex
               h="80%"
@@ -113,6 +120,8 @@ const Navbar = () => {
           </Text>
         </Flex>
       </Container>
+
+      
     </div>
   );
 };
