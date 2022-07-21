@@ -3,9 +3,25 @@ import React from 'react';
 
 const InsightsCards = () => {
   return (
-    <Box as="section" border={'1px solid green'} roundedBottom="100rem 5rem" background="#fff url(./assets/homepage/insightCardsBg.jpg) 0 0 repeat">
+    <Box
+      as="section"
+      border={'1px solid green'}
+      roundedBottom="100rem 5rem"
+      background="#fff url(./assets/homepage/insightCardsBg.jpg) 0 0 repeat"
+      _before={{
+        display: 'block',
+        width: '100%',
+        top: '-50rem',
+        height: '20rem',
+        content: '""',
+        background: '#fff',
+        // border: '2px solid red',
+        borderBottomRightRadius: '100rem 5rem',
+        borderBottomLeftRadius: '100rem 5rem',
+      }}
+    >
       <Box p={'4rem 0 1.6rem 0'}>
-        <Box p="0 15px 0 15px" maxW={"1470px"} m="auto" >
+        <Box p="0 15px 0 15px" maxW={'1470px'} m="auto">
           <Heading
             color="#268fd0"
             as={'h3'}
@@ -15,7 +31,7 @@ const InsightsCards = () => {
           >
             {cards.Heading}
           </Heading>
-          <Grid templateColumns="repeat(2,1fr)" gap={10} >
+          <Grid templateColumns="repeat(2,1fr)" gap={10}>
             {cards.data.map((item, index) => (
               <Box key={index}>
                 <Image src={item.imgUrl} m="auto" h="200px" />
@@ -27,7 +43,9 @@ const InsightsCards = () => {
                 >
                   {item.title}
                 </Heading>
-                <Text color="#46618a" fontWeight={500} fontSize="1.5rem">{item.description}</Text>
+                <Text color="#46618a" fontWeight={500} fontSize="1.5rem">
+                  {item.description}
+                </Text>
               </Box>
             ))}
           </Grid>
