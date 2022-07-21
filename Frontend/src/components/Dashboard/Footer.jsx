@@ -3,14 +3,7 @@ import { Container, Flex, Text, Box } from '@chakra-ui/react';
 const Footer = () => {
   return (
     <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+     
 
       <Container
         maxW="container.5xl"
