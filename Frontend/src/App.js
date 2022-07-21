@@ -42,7 +42,9 @@ function App() {
           
 
         </Routes>
+
         <Footer />
+
       </Box>
     </ChakraProvider>
   );
