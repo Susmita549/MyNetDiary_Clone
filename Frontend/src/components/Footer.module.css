@@ -1,0 +1,13 @@
+.homeFooterSec::before {
+  position: absolute;
+  top: 0rem;
+  display: block;
+  width: auto;
+  height: 2rem;
+  background: #fff;
+  content: '';
+  border-bottom-right-radius: 100rem 5rem;
+  border-bottom-left-radius: 100rem 5rem;
+  /* z-index: 1000; */
+  /* box-shadow: rgb(82 19 0 / 30%) 0 -2.2rem 8.2rem; */
+}

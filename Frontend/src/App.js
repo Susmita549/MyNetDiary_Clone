@@ -42,8 +42,8 @@ function App() {
           
 
         </Routes>
-        <Dashboard/>
-        <Footer />
+        {/* <Dashboard/> */}
+        {/* <Footer /> */}
       </Box>
     </ChakraProvider>
   );
