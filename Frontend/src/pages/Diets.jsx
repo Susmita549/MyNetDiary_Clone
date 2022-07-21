@@ -27,12 +27,40 @@ const Diets = () => {
     allData.dietsLibrary.caloriesCounting
   );
   const [selected, setSelected] = useState('');
-  console.log(allData.dietsLibrary.caloriesCounting);
-  const handleUpdateData = (value)=>{
-    console.log(value);
-  }
+  // console.log(porductsData);
+  const handleUpdateData = value => {
+    // console.log(value);
+    switch (value) {
+      case 'diet-library':
+        return setProductsData(allData.dietsLibrary.caloriesCounting);
+
+      case 'Calorie-Counting':
+        return setProductsData(allData.dietsLibrary.caloriesCounting);
+      case 'Low-Carb-Diet':
+        return setProductsData(allData.dietsLibrary.LowCarbDiet);
+      case 'Keto-Diet':
+        return setProductsData(allData.dietsLibrary.KetoDietLibrary);
+      case 'High-Protein-Diet':
+        return setProductsData(allData.dietsLibrary.HighProteinDiet);
+      case 'Low-Fat-Diet':
+        return setProductsData(allData.dietsLibrary.LowFatDiet);
+      case 'Mediterranean-Diet':
+        return setProductsData(allData.dietsLibrary.MediterraneanDiet);
+      case 'Vegetarian-Diet':
+        return setProductsData(allData.dietsLibrary.VegetarianDiet);
+      case 'Vegan-Diet':
+        return setProductsData(allData.dietsLibrary.VeganDiet);
+      case 'dietitian-team':
+        return setProductsData(allData.dietitianTeam.dietitianTeam);
+      case 'dietitians-blog':
+        return setProductsData(allData.dietitianBlog.dietitianBlog);
+
+      default:
+        return setProductsData(allData.dietsLibrary.caloriesCounting);
+    }
+  };
   return (
-    <Box p={'0 40px'} borderLeft={'100px'} width={"100%"}>
+    <Box p={'0 40px'} borderLeft={'100px'} width={'100%'}>
       <Flex>
         <Box width={'35%'} pr="10px">
           <Accordion allowToggle>
@@ -62,15 +90,10 @@ const Diets = () => {
                             color: '#46618a',
                             textDecoration: 'underline',
                           }}
-                          // onClick={() => {
-
-                          //   setLinkTag(` > ${item.category}`);
-                          //   setSelected(item.subCategory[0].item);
-                          //   navigate(
-                          //     `/products/${item.path}/${item.subCategory[0]?.subpath}`
-                          //   );
-                          //   preTag.current = ` > ${item.category}`;
-                          // }}
+                          onClick={() => {
+                            setSelected(item.category);
+                            handleUpdateData(item.path);
+                          }}
                           cursor="pointer"
                         >
                           {item.category}
@@ -93,7 +116,7 @@ const Diets = () => {
                           _hover={{ textDecoration: 'underline' }}
                           onClick={() => {
                             setSelected(subItem.item);
-                           handleUpdateData(subItem.item);
+                            handleUpdateData(subItem.subpath);
                           }}
                           cursor="pointer"
                         >
@@ -129,8 +152,8 @@ const Diets = () => {
           lineHeight={1.5}
           pl="10px"
         >
-          <Box>
-            {porductsData.message ?? porductsData.message}
+          <Box mb="30px" fontSize="18px">
+            {porductsData.message ? porductsData.message : ''}
           </Box>
           {porductsData &&
             porductsData?.section.map(product => (
@@ -147,16 +170,15 @@ const Diets = () => {
 
                 <Grid
                   width={'100%'}
-                  templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)"]}
-                  gap={["2rem","3rem","5rem"]}
+                  templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
+                  gap={['2rem', '3rem', '5rem']}
                   // border={'1px solid green'}
                   borderColor={'#eaeaea'}
                 >
                   {product.data?.map(item => (
                     <Box
-                   
                       key={item.id}
-                      marginBottom={'4rem'}
+                      // marginBottom={'4rem'}
                       fontSize={'16px'}
                       borderRadius={'15px'}
                       display={'flex'}
@@ -169,16 +191,60 @@ const Diets = () => {
                       textAlign="left"
                       boxShadow={'rgb(219 213 208 / 78%) 0 3px 6px'}
                     >
-                      <Box >
+                      <Box>
                         <Box as="a" href={item.href} target="_blank">
                           <Image src={item.imgUrl} rounded="15px 15px 0 0" />
                         </Box>
-                        <Box p={["1rem","2rem"]}>
-                          <Heading as="h5" fontSize="32px" _hover={{textDecoration:"underline"}}>
+                        <Box p={['1rem', '2rem']}>
+                          {item?.date ? (
+                            <Flex gap={2}>
+                              <Image src="./assets/dietpage/calender.svg" />
+                              <Text>{item.date}</Text>
+                            </Flex>
+                          ) : (
+                            ''
+                          )}
+                          <Heading
+                            as="h5"
+                            fontSize="32px"
+                            _hover={{ textDecoration: 'underline' }}
+                          >
                             {item.name}
                           </Heading>
-                          <Box width="80px" height="5px" borderTop="3px solid #E2E8F0" m={["10px 0 10px 0","20px 0 20px 0"]}></Box>
-                          <Text fontSize="18px" mt="10px">{item.description}</Text>
+                          {item?.specialist ? (
+                            <Heading
+                              as="h4"
+                              color={'#268fd0'}
+                              fontSize="22px"
+                              fontWeight={700}
+                            >
+                              {item?.specialist}
+                            </Heading>
+                          ) : (
+                            ''
+                          )}
+
+                          {item?.date ? (
+                            ''
+                          ) : (
+                            <Box
+                              width="80px"
+                              height="5px"
+                              borderTop="3px solid #E2E8F0"
+                              m={['10px 0 10px 0', '20px 0 20px 0']}
+                            ></Box>
+                          )}
+                          {item?.para1 ? (
+                            <Text as="i" fontSize="18px" mt="10px">
+                              {item.para1}
+                            </Text>
+                          ) : (
+                            ''
+                          )}
+
+                          <Text fontSize="18px" mt="10px">
+                            {item.description}
+                          </Text>
                         </Box>
                       </Box>
                     </Box>
@@ -193,7 +259,6 @@ const Diets = () => {
 };
 
 export default Diets;
-
 
 const sideMenu = [
   {
