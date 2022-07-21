@@ -24,74 +24,23 @@ import allData from '../db.json';
 
 const Diets = () => {
   const [porductsData, setProductsData] = useState(
-    allData.dietsLibrary.caloriesCounting.section
+    allData.dietsLibrary.caloriesCounting
   );
   const [selected, setSelected] = useState('');
-  console.log(allData.dietsLibrary.caloriesCounting.section);
-  const sideMenu = [
-    {
-      category: 'Diet Library',
-      path: 'diet-library',
-      subCategory: [
-        {
-          subpath: 'fresh-fruits',
-          item: 'Calorie Counting',
-          logo: './assets/dietpage/CalorieCounting.svg',
-        },
-        {
-          subpath: 'exotic-fruits',
-          item: 'Low-Carb Diet',
-          logo: './assets/dietpage/Low-cardDiet.svg',
-        },
-        {
-          subpath: 'fruit-combos',
-          item: 'Keto Diet',
-        },
-        {
-          subpath: 'fruit-combos',
-          item: 'High-Protein Diet',
-        },
-        {
-          subpath: 'fruit-combos',
-          item: 'Low-Fat Diet',
-        },
-        {
-          subpath: 'fruit-combos',
-          item: 'Mediterranean Diet',
-        },
-        {
-          subpath: 'fruit-combos',
-          item: 'Vegetarian Diet',
-        },
-        {
-          subpath: 'fruit-combos',
-          item: 'Vegan Diet',
-        },
-      ],
-    },
-    {
-      category: 'Dietitian Team',
-      path: 'dietitian-team',
-    },
-    {
-      category: "Dietitian's Blog",
-      path: 'dietitians-blog',
-    },
-    {
-      category: 'In the News',
-      path: 'in-the-news',
-    },
-  ];
+  console.log(allData.dietsLibrary.caloriesCounting);
+  const handleUpdateData = (value)=>{
+    console.log(value);
+  }
   return (
-    <Box p={'0 40px'}>
+    <Box p={'0 40px'} borderLeft={'100px'} width={"100%"}>
       <Flex>
-        <Box width={'220px'} pr="10px">
+        <Box width={'35%'} pr="10px">
           <Accordion allowToggle>
             {sideMenu.map(item => (
               <AccordionItem
                 key={item.category}
                 border={'none'}
-                borderBottom={'1px solid #eee'}
+                borderBottom={'2px dashed #eee'}
               >
                 {({ isExpanded }) => (
                   <>
@@ -106,9 +55,13 @@ const Diets = () => {
                           flex="1"
                           textAlign="left"
                           ml={3}
-                          fontSize={'16px'}
+                          fontSize={'25px'}
                           fontWeight={600}
-                          _hover={{ color: '#4fbb90' }}
+                          color={'#268fd0'}
+                          _hover={{
+                            color: '#46618a',
+                            textDecoration: 'underline',
+                          }}
                           // onClick={() => {
 
                           //   setLinkTag(` > ${item.category}`);
@@ -129,21 +82,19 @@ const Diets = () => {
                         <AccordionPanel
                           key={subItem.item}
                           pb={2}
-                          fontSize="14px"
+                          fontSize="25px"
                           textAlign={'left'}
                           ml={2}
-                          border={'1px solid #eee'}
+                          border={'1px dashed #eee'}
                           borderLeft={'none'}
-                          // onClick={() => {
-                          //   setSelected(subItem.item);
-                          //   let newData = [
-                          //     {
-                          //       id: subItem.item,
-                          //       name: subItem.item,
-                          //     },
-                          //   ];
-                          //   setProductsData([...newData]);
-                          // }}
+                          borderRight={'none'}
+                          color={'#46618a'}
+                          fontWeight={600}
+                          _hover={{ textDecoration: 'underline' }}
+                          onClick={() => {
+                            setSelected(subItem.item);
+                           handleUpdateData(subItem.item);
+                          }}
                           cursor="pointer"
                         >
                           <Flex
@@ -152,7 +103,7 @@ const Diets = () => {
                             gap={3}
                           >
                             {subItem.logo && (
-                              <Image src={subItem.logo} h="10px" w="10px" />
+                              <Image src={subItem.logo} h="25px" w="25px" />
                             )}
                             <Text>{subItem.item}</Text>
                           </Flex>
@@ -164,29 +115,72 @@ const Diets = () => {
             ))}
           </Accordion>
         </Box>
-        <Box width={'100%'} pl="10px">
+        <Box
+          width={'100%'}
+          // border={'1px solid red'}
+          flexWrap={'wrap'}
+          justify-content={'space-between'}
+          order={'2'}
+          boxSizing={'inherit'}
+          fontWeight={400}
+          fontSize={'10px'}
+          color={'#46618a'}
+          textAlign={'left'}
+          lineHeight={1.5}
+          pl="10px"
+        >
+          <Box>
+            {porductsData.message ?? porductsData.message}
+          </Box>
           {porductsData &&
-            porductsData?.map(product => (
-              <Box key={uuidv4()} border={'1px solid red'}>
-                <Heading as="h3" textAlign="left">
+            porductsData?.section.map(product => (
+              <Box key={uuidv4()}>
+                <Heading
+                  as="h3"
+                  textAlign="left"
+                  marginBottom={'20px'}
+                  color={'#268fd0'}
+                  fontSize="57px"
+                >
                   {product.heading}
                 </Heading>
 
                 <Grid
                   width={'100%'}
-                  border={'1px solid orange'}
-                  templateColumns="repeat(2, 1fr)"
-                  gap={4}
+                  templateColumns={["repeat(1, 1fr)","repeat(2, 1fr)"]}
+                  gap={["2rem","3rem","5rem"]}
+                  // border={'1px solid green'}
+                  borderColor={'#eaeaea'}
                 >
                   {product.data?.map(item => (
-                    <Box key={item.id}>
-                      <Box as="a" href={item.href} target="_blank">
-                        <Image src={item.imgUrl} />
+                    <Box
+                   
+                      key={item.id}
+                      marginBottom={'4rem'}
+                      fontSize={'16px'}
+                      borderRadius={'15px'}
+                      display={'flex'}
+                      flexDirection="column"
+                      minWidth={'230px'}
+                      backgroundColor={'#fff'}
+                      fontWeight={'400'}
+                      color={'#46618a'}
+                      // lineHeight={'1rem'}
+                      textAlign="left"
+                      boxShadow={'rgb(219 213 208 / 78%) 0 3px 6px'}
+                    >
+                      <Box >
+                        <Box as="a" href={item.href} target="_blank">
+                          <Image src={item.imgUrl} rounded="15px 15px 0 0" />
+                        </Box>
+                        <Box p={["1rem","2rem"]}>
+                          <Heading as="h5" fontSize="32px" _hover={{textDecoration:"underline"}}>
+                            {item.name}
+                          </Heading>
+                          <Box width="80px" height="5px" borderTop="3px solid #E2E8F0" m={["10px 0 10px 0","20px 0 20px 0"]}></Box>
+                          <Text fontSize="18px" mt="10px">{item.description}</Text>
+                        </Box>
                       </Box>
-                      <Heading as="h5" fontSize="18px">
-                        {item.name}
-                      </Heading>
-                      <Text>{item.description}</Text>
                     </Box>
                   ))}
                 </Grid>
@@ -199,3 +193,66 @@ const Diets = () => {
 };
 
 export default Diets;
+
+
+const sideMenu = [
+  {
+    category: 'Diet Library',
+    path: 'diet-library',
+    color: '#46618a',
+    subCategory: [
+      {
+        subpath: 'Calorie-Counting',
+        item: 'Calorie Counting',
+        logo: './assets/dietpage/CalorieCounting.svg',
+      },
+      {
+        subpath: 'Low-Carb-Diet',
+        item: 'Low-Carb Diet',
+        logo: './assets/dietpage/Low-cardDiet.svg',
+      },
+      {
+        subpath: 'Keto-Diet',
+        item: 'Keto Diet',
+        logo: './assets/dietpage/KetoDiet.svg',
+      },
+      {
+        subpath: 'High-Protein-Diet',
+        item: 'High-Protein Diet',
+        logo: './assets/dietpage/HighProteinDiet.svg',
+      },
+      {
+        subpath: 'Low-Fat-Diet',
+        item: 'Low-Fat Diet',
+        logo: './assets/dietpage/LowfatDiet.svg',
+      },
+      {
+        subpath: 'Mediterranean-Diet',
+        item: 'Mediterranean Diet',
+        logo: './assets/dietpage/MediterraneamDiet.svg',
+      },
+      {
+        subpath: 'Vegetarian-Diet',
+        item: 'Vegetarian Diet',
+        logo: './assets/dietpage/VegeterianDiet.svg',
+      },
+      {
+        subpath: 'Vegan-Diet',
+        item: 'Vegan Diet',
+        logo: './assets/dietpage/VeganDiet.svg',
+      },
+    ],
+  },
+  {
+    category: 'dietitian team',
+    path: 'dietitian-team',
+  },
+  {
+    category: "Dietitian's Blog",
+    path: 'dietitians-blog',
+  },
+  {
+    category: 'In the News',
+    path: 'in-the-news',
+  },
+];
