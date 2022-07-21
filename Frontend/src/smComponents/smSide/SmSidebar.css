@@ -1,0 +1,48 @@
+.Sidebar{
+    height:100%;
+    width:280px;
+    max-width: 280px;
+    background-color:rgb(240,240,240);
+    box-sizing: border-box;
+}
+
+.icon-style{
+    height:30px;
+    width:30px;
+}
+
+/* .SidebarList{
+    height:auto;
+    width:100%;
+    padding:0;
+} */
+
+.row{
+    width:100%;
+    height:50px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+.row:hover{
+    background-color: rgb(206,206,206);
+}
+
+.img-icon{
+    flex:20%;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    margin-left:2%;
+    
+}
+.titleDiv{
+    flex:80%;
+    margin-left:5%;
+}
+.titleP{
+    text-align: left;
+}
+
