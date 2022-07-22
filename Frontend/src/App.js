@@ -18,6 +18,7 @@ import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
+
     <Box textAlign="center" fontSize="xl">
       <Navbar />
       <Routes>
@@ -34,6 +35,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Box>
+
   );
 }
 
