@@ -15,7 +15,6 @@ import Chakraui from './pages/Chakraui';
 import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
-
 function App() {
   return (
     <ChakraProvider theme={theme}>
@@ -34,12 +33,8 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
-
-        
-
         <Footer />
       </Box>
-      <Box></Box>
     </ChakraProvider>
   );
 }
