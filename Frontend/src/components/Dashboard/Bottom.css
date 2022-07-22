@@ -1,0 +1,22 @@
+
+
+.bottom__first{
+    display:flex;
+    border-bottom: 1px solid rgb(165, 157, 157);
+    align-items: center;
+    padding:10px
+    
+}
+.bottom__second{
+    display: flex;
+    justify-content: space-between;
+    /* border:1px dashed green; */
+}
+.bottom__second__left,.bottom__second__right{
+    display: flex;
+    width: 48%;
+    justify-content: space-between;
+    align-items: center;
+    /* border:1px dashed green; */
+    padding: 0 10px 
+}
