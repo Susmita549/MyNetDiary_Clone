@@ -1,4 +1,7 @@
+
+import React, { useState } from 'react';
 import React from 'react';
+
 import {
   Box,
   Flex,
@@ -13,6 +16,10 @@ import {
 import './signup.css';
 
 const SignUp = () => {
+
+  const [selectedStage, setSelectedStage] = useState(1);
+
+
   return (
     <>
       <Box className="main">
@@ -21,7 +28,25 @@ const SignUp = () => {
             <Box className="first_layer"></Box>
           </Box>
         </Box>
-        <StageOne />
+
+        {selectedStage === 1 ? (
+          <StageOne
+            selectedStage={selectedStage}
+            setSelectedStage={setSelectedStage}
+          />
+        ) : selectedStage === 2 ? (
+          <StageTwo
+            selectedStage={selectedStage}
+            setSelectedStage={setSelectedStage}
+          />
+        ) : (
+          <StageThree
+            selectedStage={selectedStage}
+            setSelectedStage={setSelectedStage}
+          />
+        )}
+
+        
       </Box>
       <Flex
         style={{
@@ -40,7 +65,15 @@ const SignUp = () => {
 
 export default SignUp;
 
+
+const StageOne = ({ selectedStage, setSelectedStage }) => {
+  const handleStage1 = () => {
+    setSelectedStage(selectedStage + 1);
+    // console.log('someone clicked me');
+  };
+
 const StageOne = () => {
+
   return (
     <Box className="form_field">
       <Box className="form_header">Tell Us About Yourself</Box>
@@ -91,7 +124,96 @@ const StageOne = () => {
           </RadioGroup>
         </Box>
       </Box>
-      <Button colorScheme="blue" marginTop="2rem">
+
+      <Button colorScheme="blue" marginTop="2rem" onClick={handleStage1}>
+        NEXT
+      </Button>
+    </Box>
+  );
+};
+
+const StageTwo = ({ selectedStage, setSelectedStage }) => {
+  const handleStage2 = () => {
+    setSelectedStage(selectedStage + 1);
+    console.log('someone clicked me', selectedStage);
+  };
+  const handlePev = () => {
+    setSelectedStage(selectedStage - 1);
+    console.log('prev ', selectedStage);
+  };
+  return (
+    <Box className="form_field">
+      <Box className="form_header">Tell Us About Yourself</Box>
+
+      <Box style={{ fontWeight: '500', color: '#3c9ec3' }}>
+        To calculate your calorie and nutrient needs
+      </Box>
+      <Box>
+        <Box marginLeft="-12rem" marginBottom="2rem">
+          Your desire progress
+        </Box>
+        <Box marginLeft="12rem">
+          <RadioGroup defaultValue="2">
+            <Stack spacing={5} direction="column">
+              <Radio colorScheme="green" value="1" border="red">
+                Lose 1 lb/week
+              </Radio>
+              <Radio colorScheme="green" value="2">
+                Lose 1½ lb/week
+              </Radio>
+              <Radio colorScheme="green" value="3">
+                Lose 2 lbs/week
+              </Radio>
+            </Stack>
+          </RadioGroup>
+        </Box>
+      </Box>
+      <Button colorScheme="blue" marginTop="2rem" onClick={handlePev}>
+        BACK
+      </Button>
+      <Button colorScheme="blue" marginTop="2rem" onClick={handleStage2}>
+        NEXT
+      </Button>
+    </Box>
+  );
+};
+const StageThree = ({ selectedStage, setSelectedStage }) => {
+  const handleStage3 = () => {
+    console.log('This is signup page', selectedStage);
+  };
+  const handlePev = () => {
+    setSelectedStage(selectedStage - 1);
+    console.log('prev ', selectedStage);
+  };
+  return (
+    <Box className="form_field">
+      <Box className="form_header">SignUp</Box>
+
+      <Box>
+        <Box marginLeft="-12rem" marginBottom="2rem">
+          Your desire progress
+        </Box>
+        <Box marginLeft="12rem">
+          <RadioGroup defaultValue="2">
+            <Stack spacing={5} direction="column">
+              <Radio colorScheme="green" value="1" border="red">
+                Lose 1 lb/week
+              </Radio>
+              <Radio colorScheme="green" value="2">
+                Lose 1½ lb/week
+              </Radio>
+              <Radio colorScheme="green" value="3">
+                Lose 2 lbs/week
+              </Radio>
+            </Stack>
+          </RadioGroup>
+        </Box>
+      </Box>
+      <Button colorScheme="blue" marginTop="2rem" onClick={handlePev}>
+        BACK
+      </Button>
+      <Button colorScheme="blue" marginTop="2rem" onClick={handleStage3}>
+
         NEXT
       </Button>
     </Box>
