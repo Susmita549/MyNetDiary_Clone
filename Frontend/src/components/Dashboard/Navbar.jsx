@@ -30,14 +30,13 @@ import 'react-calendar/dist/Calendar.css';
 import { Link } from 'react-router-dom';
 
 let litag = [
-  {name:'DASHBOARD',link:'dashboard/dashboard'},
-  {name:'PLAN',link:'/plan'},
-  {name:'FOOD',link:'/food'},
-  {name:'EXERCISE',link:'/exercise'},
-  {name:'ANALYSIS',link:'/analysis'},
-  {name:'COMMUNITY',link:'/community'},
-  {name:'SETTINGS',link:'/settings'}
-  
+  { name: 'DASHBOARD', link: 'dashboard/dashboard' },
+  { name: 'PLAN', link: '/plan' },
+  { name: 'FOOD', link: '/food' },
+  { name: 'EXERCISE', link: '/exercise' },
+  { name: 'ANALYSIS', link: '/analysis' },
+  { name: 'COMMUNITY', link: '/community' },
+  { name: 'SETTINGS', link: '/settings' },
 ];
 
 const Navbar = () => {
@@ -90,7 +89,7 @@ const Navbar = () => {
         color="rgb(255, 255, 255)"
       >
         <Flex h="50%" maxW={'1170px'} m="auto">
-          <Link w="20%" to='/'>
+          <Link w="20%" to="/">
             <img
               src="https://s3.amazonaws.com/img.mynetdiary.com/logo_react.png"
               alt="logo"
@@ -105,7 +104,16 @@ const Navbar = () => {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Button bgColor={'rgb(59, 131, 2)'} onClick={onOpen}>
+            <Button
+              bgColor={'rgb(59, 131, 2)'}
+              onClick={onOpen}
+              _hover={{
+                background: 'none',
+              }}
+              _active={{
+                background: 'none',
+              }}
+            >
               <Image
                 height="50px"
                 width="50px"
@@ -194,7 +202,6 @@ const Navbar = () => {
                   cursor="pointer"
                   _hover={{ fontWeight: 'bold', fontSize: 'md' }}
                 >
-                  
                   <Link to={el.link}>{el.name}</Link>
                 </Text>
               </Tab>

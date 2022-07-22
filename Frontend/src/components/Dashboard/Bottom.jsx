@@ -21,7 +21,7 @@ const Bottom = () => {
                 style={{ height: '40px', marginRight: ' 10px' }}
                 src="https://s3.amazonaws.com/img.mynetdiary.com/dashboard/icon_heart_rate.png"
               />
-              <h4 style={{ color: 'grey' }}>Health on Jan 2</h4>
+              <h4 style={{ color: 'grey' }}>Health on July 22</h4>
               <Image
                 style={{ height: '40px', marginLeft: ' 10px' }}
                 src="https://www.mynetdiary.com/img/icon/date_range_gray.png"

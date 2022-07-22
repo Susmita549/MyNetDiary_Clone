@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
+
+
   Box,
   Flex,
   Image,
@@ -7,12 +10,13 @@ import {
   Text,
   Stack,
   Progress,
-  Button
+  Button,
 } from '@chakra-ui/react';
 const Apple = () => {
   return (
     <Box>
       <Flex h="50px" justifyContent={'space-between'}>
+        <Link to='/'>
         <Button
           bgColor={'#9DC6F2'}
           w="60px"
@@ -23,6 +27,7 @@ const Apple = () => {
         >
           +
         </Button>
+        </Link>
         <Box>
           <Text fontSize="md" color="grey" mr='20px'>
             Calorie Budget
