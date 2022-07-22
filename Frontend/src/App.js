@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  theme,
-} from '@chakra-ui/react';
+import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 // import { ColorModeSwitcher } from './ColorModeSwitcher';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -19,8 +15,6 @@ import Chakraui from './pages/Chakraui';
 import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
-
-
 
 function App() {
   return (
@@ -39,11 +33,13 @@ function App() {
           <Route path="/plan" element={<Plan />} />
           <Route path="/food" element={<Food />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          
-
         </Routes>
+
+        
+
         <Footer />
       </Box>
+      <Box></Box>
     </ChakraProvider>
   );
 }
