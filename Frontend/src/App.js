@@ -15,9 +15,11 @@ import Chakraui from './pages/Chakraui';
 import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
-
 function App() {
   return (
+
+
+
 
     <Box textAlign="center" fontSize="xl">
       <Navbar />
