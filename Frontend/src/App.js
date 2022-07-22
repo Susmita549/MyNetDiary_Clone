@@ -43,7 +43,7 @@ function App() {
 
         </Routes>
         {/* <Dashboard/> */}
-        {/* <Footer /> */}
+        <Footer />
       </Box>
     </ChakraProvider>
   );
