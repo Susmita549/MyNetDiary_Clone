@@ -1,0 +1,154 @@
+{
+    "breakfast" : [
+        {
+            "id":0,
+            "item":"Orange juice",
+            "calories":112,
+            "protien":10,
+            "fats":4,
+            "fdgrd":"A+",
+            "carbs":26
+        },
+        {
+            "id":1,
+            "item":"Boiled Eggs",
+            "calories":91,
+            "protien":14,
+            "fats":8,
+            "fdgrd":"A+",
+            "carbs":20
+        },
+        {
+            "id":2,
+            "item":"Oats",
+            "calories":120,
+            "protien":37,
+            "fats":2,
+            "fdgrd":"A",
+            "carbs":80
+        },
+        {
+            "id":3,
+            "item":"Omlet",
+            "calories":91,
+            "protien":60,
+            "fats":3.5,
+            "fdgrd":"B+",
+            "carbs":50
+        }
+    ],
+     "lunch" : [
+    {
+            "id":0,
+            "item":"Apple",
+            "calories":82,
+           "protien":0.4,
+            "fats":0.2,
+            "fdgrd":"A+",
+            "carbs":84
+        },
+        {
+            "id":1,
+            "item":"Chicken ",
+            "calories":91,
+            "protien":37,
+            "fats":8,
+            "fdgrd":"A+",
+            "carbs":30
+        },
+        {
+            "id":2,
+            "item":"Potatoes baked",
+            "calories":120,
+            "protien":15.6,
+            "fats":16,
+            "fdgrd":"A",
+            "carbs":90
+        },
+        {
+            "id":3,
+            "item":"Boiled Rice",
+            "calories":91,
+            "protien":10,
+            "fats":4,
+            "fdgrd":"A+",
+            "carbs":26
+        }
+    ],
+     "dinner" : [
+    {
+            "id":0,
+            "item":"Pulses",
+            "calories":102,
+            "protien":120,
+            "fats":0.3,
+            "fdgrd":"A+",
+            "carbs":12
+        },
+        {
+            "id":1,
+            "item":"Veggies",
+            "calories":126,
+            "protien":40,
+            "fats":0.4,
+            "fdgrd":"A+",
+            "carbs":26
+        },
+        {
+            "id":2,
+            "item":"Baked Chicken",
+            "calories":120,
+            "protien":37,
+            "fats":6,
+            "fdgrd":"A",
+            "carbs":40
+        },
+        {
+            "id":3,
+            "item":"Chicken Salad",
+            "calories":91,
+            "protien":110,
+            "fats":4,
+            "fdgrd":"A+",
+            "carbs":20
+        }
+    ],
+     "snacks" : [
+    {
+            "id":0,
+            "item":"Protien shake",
+            "calories":12,
+            "protien":115,
+            "fats":0.4,
+            "fdgrd":"A+",
+            "carbs":6
+        },
+        {
+            "id":1,
+            "item":"Scrambled Eggs",
+            "calories":81,
+            "protien":90,
+            "fats":0.4,
+            "fdgrd":"A+",
+            "carbs":36
+        },
+        {
+            "id":2,
+            "item":"Fruit Salad ",
+            "calories":120,
+            "protien":37,
+            "fats":4,
+            "fdgrd":"A",
+            "carbs":40
+        },
+        {
+            "id":3,
+            "item":"Pizza",
+            "calories":91,
+            "protien":30,
+            "fats":64,
+            "fdgrd":"C",
+            "carbs":260
+        }
+     ]
+}

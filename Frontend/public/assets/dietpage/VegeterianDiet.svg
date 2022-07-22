@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 131 125" width="24" height="24" class="ml-n5 mr-2">
+    <defs>
+        <filter filterUnits="userSpaceOnUse" id="Filter_diet_nav_6" x="1.5px" y="8.5px" width="62px" height="114px">
+            <feOffset in="SourceAlpha" dx="0" dy="7"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter filterUnits="userSpaceOnUse" id="Filter_diet_nav_7" x="68.5px" y="29.5px" width="46px" height="50px">
+            <feOffset in="SourceAlpha" dx="0" dy="7"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter filterUnits="userSpaceOnUse" id="Filter_diet_nav_8" x="50.5px" y="1.5px" width="68px" height="65px">
+            <feOffset in="SourceAlpha" dx="0" dy="7"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter filterUnits="userSpaceOnUse" id="Filter_diet_nav_9" x="65.5px" y="75.5px" width="43px" height="45px">
+            <feOffset in="SourceAlpha" dx="0" dy="7"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter filterUnits="userSpaceOnUse" id="Filter_diet_nav_10" x="68.5px" y="55.5px" width="60px" height="62px">
+            <feOffset in="SourceAlpha" dx="0" dy="7"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+
+    </defs>
+    <g filter="url(#Filter_diet_nav_6)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(255, 232, 138)" d="M44.835,100.199 C43.997,101.037 42.639,101.037 41.801,100.199 L7.128,65.515 C6.290,64.677 6.290,63.319 7.128,62.481 L15.107,54.499 C15.604,54.002 16.312,53.780 17.003,53.905 C17.695,54.029 18.282,54.485 18.574,55.124 C18.858,55.745 19.248,56.305 19.732,56.790 C21.959,59.017 25.581,59.017 27.808,56.790 C30.034,54.563 30.033,50.940 27.807,48.712 C27.321,48.226 26.761,47.837 26.144,47.555 C25.504,47.264 25.048,46.677 24.923,45.984 C24.798,45.292 25.020,44.583 25.518,44.085 L55.466,14.128 C56.304,13.290 57.662,13.290 58.500,14.128 L58.500,113.868 C57.662,114.706 56.304,114.706 55.466,113.868 L51.615,110.016 C50.777,109.178 50.777,107.819 51.615,106.981 C53.484,105.112 53.484,102.069 51.615,100.200 C49.746,98.330 46.704,98.329 44.835,100.199 ZM49.357,58.927 C51.355,56.928 51.355,53.687 49.357,51.688 C47.358,49.689 44.118,49.689 42.120,51.688 C40.122,53.687 40.122,56.928 42.120,58.927 C44.118,60.926 47.358,60.926 49.357,58.927 ZM44.715,82.727 C48.425,79.016 48.425,73.000 44.715,69.289 C41.006,65.578 34.991,65.578 31.281,69.289 C27.571,73.000 27.571,79.016 31.281,82.727 C34.991,86.438 41.006,86.438 44.715,82.727 Z"></path>
+    </g>
+    <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="3px" stroke-linecap="round" stroke-linejoin="miter" fill="rgb(242, 242, 242)" d="M51.500,25.500 L31.500,45.500 "></path>
+    <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="3px" stroke-linecap="round" stroke-linejoin="miter" fill="rgb(242, 242, 242)" d="M17.500,59.500 L11.500,65.500 "></path>
+    <g filter="url(#Filter_diet_nav_7)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(157, 255, 126)" d="M89.973,46.286 L73.971,51.783 C73.971,51.783 87.635,56.333 97.205,71.688 C97.696,72.477 98.741,72.721 99.554,72.255 L103.686,69.885 L107.816,67.515 C108.629,67.049 108.939,66.027 108.497,65.210 C99.899,49.298 102.766,35.264 102.766,35.264 L89.973,46.286 Z"></path>
+    </g>
+    <g filter="url(#Filter_diet_nav_8)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(157, 255, 126)" d="M107.297,38.125 C104.378,39.799 101.055,40.147 98.021,39.367 C98.207,43.811 95.984,48.193 91.858,50.560 C87.953,52.800 83.329,52.663 79.640,50.623 C78.687,53.269 76.830,55.603 74.197,57.114 C68.268,60.515 60.670,58.467 57.226,52.539 C54.400,47.675 55.254,41.715 58.926,37.852 C58.279,37.167 57.693,36.408 57.200,35.560 C53.756,29.632 55.770,22.070 61.699,18.669 C65.589,16.437 70.192,16.564 73.874,18.581 C73.957,14.404 76.148,10.380 80.038,8.148 C85.966,4.747 93.564,6.795 97.009,12.722 C97.502,13.571 97.870,14.455 98.144,15.353 C103.347,14.125 108.969,16.370 111.796,21.234 C115.240,27.161 113.226,34.723 107.297,38.125 Z"></path>
+    </g>
+    <g filter="url(#Filter_diet_nav_9)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(157, 255, 126)" d="M90.714,93.298 L82.327,80.983 C82.327,80.983 81.663,93.532 70.897,104.996 C70.345,105.585 70.382,106.522 70.966,107.106 L73.936,110.077 L76.906,113.046 C77.490,113.631 78.427,113.668 79.016,113.115 C90.480,102.349 103.028,101.686 103.028,101.686 L90.714,93.298 Z"></path>
+    </g>
+    <g filter="url(#Filter_diet_nav_10)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(157, 255, 126)" d="M120.358,92.270 C119.755,92.874 119.093,93.379 118.397,93.808 C120.650,97.935 120.062,103.181 116.603,106.639 C112.389,110.853 105.518,110.814 101.256,106.552 C99.157,104.453 98.087,101.722 98.040,98.986 C94.322,100.121 90.094,99.206 87.127,96.239 C84.320,93.432 83.357,89.494 84.223,85.927 C81.761,85.703 79.353,84.648 77.459,82.755 C73.197,78.492 73.158,71.620 77.372,67.406 C80.830,63.948 86.075,63.359 90.202,65.613 C90.631,64.916 91.136,64.254 91.740,63.650 C95.954,59.436 102.825,59.475 107.087,63.738 C109.884,66.534 110.850,70.452 110.002,74.008 C113.557,73.159 117.475,74.125 120.271,76.922 C124.534,81.184 124.573,88.056 120.358,92.270 Z"></path>
+    </g>
+</svg>

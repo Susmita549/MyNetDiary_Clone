@@ -34,7 +34,9 @@ function App() {
           <Route path="/food" element={<Food />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
-        <Dashboard />
+
+        
+
         <Footer />
       </Box>
       <Box></Box>

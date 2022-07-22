@@ -5,9 +5,9 @@ const InsightsCards = () => {
   return (
     <Box
       as="section"
-      border={'1px solid green'}
       roundedBottom="100rem 5rem"
       background="#fff url(./assets/homepage/insightCardsBg.jpg) 0 0 repeat"
+      mb={'-20px'}
       _before={{
         display: 'block',
         width: '100%',
@@ -25,25 +25,30 @@ const InsightsCards = () => {
           <Heading
             color="#268fd0"
             as={'h3'}
-            fontSize="3.5rem"
+            fontSize={['2rem', '3.5rem']}
             fontWeight={500}
-            mb="5rem"
+            mb={['30px', '30px', '50px']}
           >
             {cards.Heading}
           </Heading>
-          <Grid templateColumns="repeat(2,1fr)" gap={10}>
+          <Grid templateColumns={['repeat(1,1fr)', 'repeat(2,1fr)']} gap={10}>
             {cards.data.map((item, index) => (
               <Box key={index}>
-                <Image src={item.imgUrl} m="auto" h="200px" />
+                <Image src={item.imgUrl} m="auto" h={["150px","150px","150px","200px"]} />
                 <Heading
                   as={'h5'}
                   color="#268fd0"
-                  m="4rem 0 2rem"
-                  fontWeight={500}
+                  m={['1rem 0', '1.5rem 0', '1.5rem 0', '4rem 0 2rem']}
+                  fontSize={['1.6rem', '1.6rem', '1.8rem', '2.5rem']}
+                  fontWeight={600}
                 >
                   {item.title}
                 </Heading>
-                <Text color="#46618a" fontWeight={500} fontSize="1.5rem">
+                <Text
+                  color="#46618a"
+                  fontWeight={500}
+                  fontSize={['1.2rem', '1.2rem', '1.2rem', '1.5rem']}
+                >
                   {item.description}
                 </Text>
               </Box>
