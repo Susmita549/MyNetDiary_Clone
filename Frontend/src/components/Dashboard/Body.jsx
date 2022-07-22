@@ -14,7 +14,7 @@ const Body = () => {
             m="15px"
             boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
           >
-            <Apple/>
+            <Apple />
           </Box>
           {/* Left Box 2*/}
           <Box
@@ -50,18 +50,18 @@ const Body = () => {
               p="10px"
             >
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration='none'>
                     MORE
-                  </Text>
-                </Link>
+                  </Link>
+             
               </Box>
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     MY DEVICE
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
             </Flex>
           </Box>
@@ -124,18 +124,18 @@ const Body = () => {
               p="10px"
             >
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     DAY REPORT
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     FOOD LOG
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
             </Flex>
           </Box>
@@ -175,11 +175,11 @@ const Body = () => {
               justifyContent={'right'}
               px="30px"
             >
-              <Link>
-                <Text fontSize="md" color="#2ca6db" textDecoration={'none'}>
+              
+                <Link fontSize="md" color="#2ca6db" textDecoration={'none'}>
                   DATA ANALYSIS
-                </Text>
-              </Link>
+                </Link>
+            
             </Flex>
           </Box>
           {/* Right Box 2*/}
@@ -237,25 +237,25 @@ const Body = () => {
               p="10px"
             >
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+               
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     WEIGH
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+               
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     PLAN
-                  </Text>
-                </Link>
+                  </Link>
+               
               </Box>
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     CHART
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
             </Flex>
           </Box>
@@ -312,25 +312,25 @@ const Body = () => {
               p="10px"
             >
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     BLOG
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     LIBRARY
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
               <Box m="0 10px">
-                <Link>
-                  <Text fontSize="md" color="#2ca6db" textDecoration="none">
+                
+                  <Link fontSize="md" color="#2ca6db" textDecoration="none">
                     MY ADVICE
-                  </Text>
-                </Link>
+                  </Link>
+                
               </Box>
             </Flex>
           </Box>
