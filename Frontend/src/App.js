@@ -18,29 +18,24 @@ import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/diets" element={<Diets />} />
 
-          <Route path="/chakra" element={<Chakraui />} />
+    <Box textAlign="center" fontSize="xl">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/library" element={<Library />} />
+        <Route path="/diets" element={<Diets />} />
 
-          <Route path="/plan" element={<Plan />} />
-          <Route path="/food" element={<Food />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
+        <Route path="/chakra" element={<Chakraui />} />
 
-        
+        <Route path="/plan" element={<Plan />} />
+        <Route path="/food" element={<Food />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Box>
 
-        <Footer />
-      </Box>
-      <Box></Box>
-    </ChakraProvider>
   );
 }
 
