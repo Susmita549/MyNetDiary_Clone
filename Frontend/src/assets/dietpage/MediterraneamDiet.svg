@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 110 126" width="24" height="24" class="ml-n5 mr-2">
+    <defs>
+        <filter filterUnits="userSpaceOnUse" id="Filter_nav_12" x="-26.5px" y="-14.5px" width="164px" height="174px">
+            <feOffset in="SourceAlpha" dx="0" dy="5"></feOffset>
+            <feGaussianBlur result="blurOut" stdDeviation="0"></feGaussianBlur>
+            <feFlood flood-color="rgb(0, 0, 0)" result="floodOut"></feFlood>
+            <feComposite operator="atop" in="floodOut" in2="blurOut"></feComposite>
+            <feComponentTransfer><feFuncA type="linear" slope="0.12"></feFuncA></feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+
+    </defs>
+    <g filter="url(#Filter_nav_12)">
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(190, 251, 149)" d="M71.065,48.498 C71.065,48.498 62.531,40.213 59.764,29.354 C56.997,18.494 59.548,9.079 60.915,7.573 C61.880,6.508 68.520,16.483 70.911,25.768 C73.663,36.458 72.273,45.684 71.065,48.498 ZM66.282,49.666 C66.282,49.666 51.903,52.550 38.908,47.742 C25.912,42.934 18.087,33.717 17.501,31.265 C17.087,29.532 31.873,29.768 43.001,33.853 C55.813,38.557 64.254,46.457 66.282,49.666 Z"></path>
+        <path fill-rule="evenodd" stroke="rgb(84, 116, 128)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="miter" fill="none" d="M97.500,43.500 C97.500,43.500 65.344,44.853 47.500,66.500 "></path>
+        <path fill-rule="evenodd" stroke="rgb(84, 116, 128)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="miter" fill="none" d="M84.059,45.487 C84.059,45.487 77.131,49.395 75.500,60.500 "></path>
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(128, 128, 0)" d="M12.720,76.535 C20.688,64.575 34.884,60.013 44.428,66.344 C53.971,72.676 55.248,87.505 47.280,99.465 C39.312,111.425 25.116,115.987 15.572,109.656 C6.029,103.324 4.752,88.495 12.720,76.535 Z"></path>
+        <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="miter" fill="none" d="M14.090,88.082 C15.885,80.832 21.561,74.174 26.920,71.903 "></path>
+        <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M34.075,66.518 C35.408,66.518 36.488,67.596 36.488,68.926 C36.488,70.256 35.408,71.334 34.075,71.334 C32.742,71.334 31.662,70.256 31.662,68.926 C31.662,67.596 32.742,66.518 34.075,66.518 Z"></path>
+        <path fill-rule="evenodd" stroke-width="3px" stroke="rgb(84, 116, 128)" fill="rgb(128, 128, 0)" d="M63.124,90.332 C60.460,77.246 66.748,64.918 77.169,62.796 C87.591,60.675 98.198,69.564 100.862,82.651 C103.526,95.737 97.238,108.066 86.816,110.187 C76.395,112.308 65.788,103.419 63.124,90.332 Z"></path>
+        <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="miter" fill="none" d="M73.476,96.328 C69.568,90.529 69.037,84.079 70.294,77.286 "></path>
+        <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M72.233,68.224 C73.209,67.244 74.795,67.240 75.776,68.217 C76.756,69.193 76.759,70.779 75.783,71.759 C74.807,72.740 73.221,72.743 72.240,71.767 C71.260,70.791 71.256,69.205 72.233,68.224 Z"></path>
+    </g>
+</svg>
