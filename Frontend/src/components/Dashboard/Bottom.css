@@ -14,7 +14,9 @@
 }
 .bottom__second__left,.bottom__second__right{
     display: flex;
+    font-size: 15px;
     width: 48%;
+    margin-top: 10px;
     justify-content: space-between;
     align-items: center;
     /* border:1px dashed green; */
