@@ -1,4 +1,7 @@
+
 import React, { useState } from 'react';
+import React from 'react';
+
 import {
   Box,
   Flex,
@@ -13,7 +16,9 @@ import {
 import './signup.css';
 
 const SignUp = () => {
+
   const [selectedStage, setSelectedStage] = useState(1);
+
 
   return (
     <>
@@ -23,6 +28,7 @@ const SignUp = () => {
             <Box className="first_layer"></Box>
           </Box>
         </Box>
+
         {selectedStage === 1 ? (
           <StageOne
             selectedStage={selectedStage}
@@ -39,6 +45,8 @@ const SignUp = () => {
             setSelectedStage={setSelectedStage}
           />
         )}
+
+        
       </Box>
       <Flex
         style={{
@@ -57,11 +65,15 @@ const SignUp = () => {
 
 export default SignUp;
 
+
 const StageOne = ({ selectedStage, setSelectedStage }) => {
   const handleStage1 = () => {
     setSelectedStage(selectedStage + 1);
     // console.log('someone clicked me');
   };
+
+const StageOne = () => {
+
   return (
     <Box className="form_field">
       <Box className="form_header">Tell Us About Yourself</Box>
@@ -112,6 +124,7 @@ const StageOne = ({ selectedStage, setSelectedStage }) => {
           </RadioGroup>
         </Box>
       </Box>
+
       <Button colorScheme="blue" marginTop="2rem" onClick={handleStage1}>
         NEXT
       </Button>
@@ -200,6 +213,7 @@ const StageThree = ({ selectedStage, setSelectedStage }) => {
         BACK
       </Button>
       <Button colorScheme="blue" marginTop="2rem" onClick={handleStage3}>
+
         NEXT
       </Button>
     </Box>

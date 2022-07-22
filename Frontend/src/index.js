@@ -5,16 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-
+import theme from './Theme/theme.js';
+import { ChakraProvider } from '@chakra-ui/react';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   // <StrictMode>
+  <ChakraProvider theme={theme}>
     <BrowserRouter>
       <ColorModeScript />
       <App />
     </BrowserRouter>
+  </ChakraProvider>
   // </StrictMode>
 );
 

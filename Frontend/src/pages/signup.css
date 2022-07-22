@@ -1,0 +1,59 @@
+/* .main{
+  position: relative;
+} */
+.first::before{
+    position: absolute;
+    /* bottom: 16%; */
+    /* left: -3%; */
+    width: 107%;
+    height: 600px;
+    left: -5rem;
+    right: -5rem;
+    background: url(https://www.mynetdiary.com/images/texture-noise@1x.png),radial-gradient(ellipse at top, #05b24a 0%, #05963d 60%);
+    border: 0.1rem dashed rgba(5, 96, 0, .6);
+    /* border-radius: 50rem 50rem 100rem 100rem; */
+    border-bottom: none;
+    content: '';
+    z-index: 1;
+    border-bottom-right-radius: 100rem 5rem;
+    border-bottom-left-radius: 100rem 5rem;
+    box-shadow: inset rgb(9 108 46 / 76%) 0 -2.3rem 10.7rem;
+    overflow: hidden;
+  
+}
+.layer{
+position: relative;
+z-index: 1;
+}
+.first_layer{
+  height: 480px;
+  position: 'relative';
+  background-image: url("https://www.mynetdiary.com/images/bg-start-signup@1x.png");
+  background-size: 100% 100%;
+  background-position: 50% 0;
+  z-index: 3
+}
+.form_field{
+  position: absolute;
+  background-color: white;
+ top: 20%;
+ left: 16%;
+ text-align: center;
+  width: 65%;
+  height: 700px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
+  border-radius: 20px;
+  z-index: 5;
+}
+.form_header{
+  color: #268fd0;
+  position: relative;
+    margin: 2rem auto 1rem;
+    padding: 0 4rem;
+    max-width: 72rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -.04em;
+    font-size: 3rem;
+}
