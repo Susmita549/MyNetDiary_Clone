@@ -78,25 +78,32 @@
     margin:30px 10px 10px 20px;
 }
 .cl{
-    margin:30px 10px 0px 100px
+    margin:30px 10px 0px 100px;
+    
 }
 .fdg{
-    margin:30px 10px 0px 70px
+    margin:30px 10px 0px 80px;
+   
 }
 .ft{
-    margin:30px 10px 0px 70px
+    margin:30px 10px 0px 80px;
+   
 }
 .ptn{
-    margin:30px 10px 0px 70px
+    margin:30px 10px 0px 65px;
+    
 }
 .cbs{
-    margin:30px 10px 0px 70px
+    margin:30px 10px 0px 70px;
+    
 }
 .cmd{
-    margin:30px -40px 0px 140px
+    margin:30px -40px 0px 120px;
+    width:200px;
 }
 .cmd1{
-    margin:30px -40px 0px 290px
+    margin:30px -40px 0px 290px;
+    
 }
 .brkfst{
     display:flex;
@@ -107,10 +114,10 @@
 }
 .brk{
     background-color:rgb(232,245,233) ;
-    border:none;
-    height:18px;
-    width:12%;
-    margin:20px
+    height:30px;
+    width:10%;
+    margin:20px;
+    
 }
 .brk:focus{
     outline:none
@@ -144,12 +151,14 @@ button:hover{
     outline:none
 }
 .p1{
-    margin:20px 10px
+    margin:30px 10px;
+    width:100px;
+    text-align: left;
+    font-size: 15px;
 }
 .inr{
     width:70%;
     height:80px;
-    
     display:flex;
     flex-direction: row;
 }
@@ -157,7 +166,6 @@ button:hover{
     height:80px;
     width:12%;
     margin:0px 10px 0px 0px;
-    /* border:1px solid black; */
 }
 option{
     background-color: white;
@@ -167,25 +175,25 @@ option{
     margin:auto;
     height:40px;
     width:52%;
-    /* border:1px solid black */
+    
 }
 .card2{
     height:80px;
     width:12%;
     margin:0px 10px 0px 30px;
-    /* border:1px solid black; */
+    
 }
 .card3{
     height:80px;
     width:12%;
     margin:0px 10px 0px 30px;
-    /* border:1px solid black; */
+   
 }
 .card4{
     height:80px;
     width:12%;
     margin:0px 10px 0px 26px;
-    /* border:1px solid black; */
+    
 }
 .graph{
     display:flex;
@@ -217,6 +225,9 @@ option{
     background: rgb(59,131,2);
     display: flex;
     font-family: 'Roboto', sans-serif;
+}
+.selStyles{
+    margin-top:20px;
 }
 .plan__footer__one{
     width: 28%;
