@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-
-
   Box,
   Flex,
   Image,
@@ -13,26 +11,34 @@ import {
   Button,
 } from '@chakra-ui/react';
 const Apple = () => {
+  const total = JSON.parse(localStorage.getItem('total'));
+  console.log(total);
+
+  const getCompletdFat = () => {
+    const value = Number(total.completedFat) / Number(total.totalFat);
+
+    console.log(value * 100);
+    return value * 100;
+  };
   return (
     <Box>
       <Flex h="50px" justifyContent={'space-between'}>
-        <Link to='/'>
-        <Button
-          bgColor={'#9DC6F2'}
-          w="60px"
-          h="60px"
-          m="-20px 0 0 -20px"
-          borderRadius={'50%'}
-          
-        >
-          +
-        </Button>
+        <Link to="/">
+          <Button
+            bgColor={'#9DC6F2'}
+            w="60px"
+            h="60px"
+            m="-20px 0 0 -20px"
+            borderRadius={'50%'}
+          >
+            +
+          </Button>
         </Link>
         <Box>
-          <Text fontSize="md" color="grey" mr='20px'>
+          <Text fontSize="md" color="grey" mr="20px">
             Calorie Budget
           </Text>
-          <Heading as="h3" size="md" color="#2ca6db" mr='30px'>
+          <Heading as="h3" size="md" color="#2ca6db" mr="30px">
             1,802
           </Heading>
         </Box>
@@ -52,12 +58,18 @@ const Apple = () => {
           </Flex>
           <Box>
             <Stack spacing={5}>
-              <Progress colorScheme="green" size="md" value={20} />
+              <Progress
+                colorScheme="green"
+                size="md"
+                value={getCompletdFat()}
+              />
             </Stack>
           </Box>
           <Flex justifyContent="space-between">
-            <Text fontSize="md">2g</Text>
-            <Text fontSize="md">left 68gm</Text>
+            <Text fontSize="md">{Number(total.completedFat)}g</Text>
+            <Text fontSize="md">
+              left {Number(total.totalFat) - Number(total.completedFat)}gm
+            </Text>
           </Flex>
         </Box>
 

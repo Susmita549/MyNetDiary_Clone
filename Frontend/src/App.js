@@ -16,19 +16,24 @@ import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
 function App() {
-  return (
-
-
-
-
+return(
     <Box textAlign="center" fontSize="xl">
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/library" element={<Library />} />
-        <Route path="/diets" element={<Diets />} />
+        <Route path="/library/diets/:subcategory" element={<Library />} />
+        <Route
+          path="/library/dietitian-team/:subcategory"
+          element={<Library />}
+        />
+        <Route
+          path="/library/dietitians-blog/:subcategory"
+          element={<Library />}
+        />
+        {/* <Route path="/diets" element={<Diets />} /> */}
 
         <Route path="/chakra" element={<Chakraui />} />
 
@@ -37,7 +42,6 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Box>
-
   );
 }
 

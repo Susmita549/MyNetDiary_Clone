@@ -8,14 +8,14 @@ import SectionBlog from '../components/Home/SectionBlog';
 import StorySlider from '../components/Home/StorySlider';
 import CalorieCounter from '../components/Home/CalorieCounter';
 import Footer from '../components/Footer';
+import WomenHelthSection from '../components/Home/WomenHelthSection';
+import BeHealthy from '../components/Home/BeHealthy';
 
 const Home = () => {
   return (
     <Box>
-      <Box>
-        <Text> Home Page</Text>
-      </Box>
-
+      <BeHealthy />
+      <WomenHelthSection />
       <InsightsCards />
       <CalorieCounter />
       <StorySlider />

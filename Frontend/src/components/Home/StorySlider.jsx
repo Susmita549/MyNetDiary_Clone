@@ -47,8 +47,10 @@ const StorySlider = () => {
         borderBottomLeftRadius="100rem 5rem"
       >
         <Box
+          margin={'auto'}
           mt={['-160px', '-160px', '0', '0']}
           mb={['0', '0', '-20px', '-35px']}
+          maxW={'1470px'}
         >
           <Swiper
             spaceBetween={30}
