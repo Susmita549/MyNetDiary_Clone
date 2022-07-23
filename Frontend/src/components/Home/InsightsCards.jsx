@@ -12,7 +12,7 @@ const InsightsCards = () => {
         display: 'block',
         width: '100%',
         top: '-50rem',
-        height: '20rem',
+        height: '4.5rem',
         content: '""',
         background: '#fff',
         // border: '2px solid red',

@@ -30,6 +30,7 @@ const SectionCta = () => {
         borderBottomRightRadius: '100rem 5rem',
         borderBottomLeftRadius: '100rem 5rem',
         zIndex: '1000',
+        overflow: 'hidden',
       }}
     >
       <Box
@@ -44,7 +45,8 @@ const SectionCta = () => {
       >
         <Box
           position={'relative'}
-          zIndex="1000"
+          zIndex="1"
+          
           _before={[
             '',
             '',
@@ -106,7 +108,7 @@ const SectionCta = () => {
                   border="5px solid transparent"
                   borderColor="#9c8126"
                   fontSize={['1.5rem', '2rem']}
-                  p={["30px 45px","35px 50px"]}
+                  p={['30px 45px', '35px 50px']}
                   _hover={{
                     background:
                       'linear-gradient(to bottom,#0dd85f 0,#0bba51 100%)',

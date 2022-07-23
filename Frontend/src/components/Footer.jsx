@@ -46,7 +46,10 @@ const Footer = () => {
           <Box mr={['0', '1.5rem']}>
             <Box mb={'3.5rem'} display={['none', 'none', 'none', 'block']}>
               <Link to="/">
-                <Image src={footerItem.logo} h={['65px','65px','65px','63px','68px']} />
+                <Image
+                  src={footerItem.logo}
+                  h={['65px', '65px', '65px', '63px', '68px']}
+                />
               </Link>
             </Box>
             <Flex
@@ -151,7 +154,7 @@ const Footer = () => {
                     fontWeight={500}
                     color={'#46618a'}
                     textAlign="left"
-                    m={['0.5rem 0 2rem 0','0.5rem 0 2rem 0', '1rem 0 3rem 0']}
+                    m={['0.5rem 0 2rem 0', '0.5rem 0 2rem 0', '1rem 0 3rem 0']}
                   >
                     {link.heading}
                   </Heading>
@@ -169,11 +172,12 @@ const Footer = () => {
                         fontSize={['sm', 'md', 'md', '19px']}
                         _before={{
                           position: 'absolute',
-                          top: '-10',
+                          top: '-9',
                           left: '0',
                           content: '"."',
                           fontSize: '3rem',
                           color: '#beaeac',
+                          rounded: '50%',
                         }}
                       >
                         {subHeading}
@@ -199,12 +203,17 @@ const Footer = () => {
               justifyContent={['center', 'space-between']}
               fontWeight={500}
               fontSize={['sm', 'lg']}
-              flexDirection={['column-reverse','column-reverse','column-reverse', 'row']}
+              flexDirection={[
+                'column-reverse',
+                'column-reverse',
+                'column-reverse',
+                'row',
+              ]}
             >
               <Flex
                 gap={[1, 2]}
                 color="#46618a"
-                flexDirection={['column','column','row', 'row']}
+                flexDirection={['column', 'column', 'row', 'row']}
                 justifyContent={'center'}
               >
                 <Text>Copyright © 2022 MyNetDiary Inc.</Text>
