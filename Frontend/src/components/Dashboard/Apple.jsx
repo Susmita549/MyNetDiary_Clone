@@ -16,21 +16,21 @@ const Apple = () => {
   //age calculation 
   const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10)
   //console.log(getAge('1997-05-12'))
-  let age = getAge('1987-05-12')
+  let age = getAge('05/12/1999')
   let height = 160
   let weight = 55
   let totalCalorie = Math.floor(10 * weight + 6.25 * height - 5 * age + 5)
   //console.log(totalCalorie);
   let fat = Math.floor((20/100)*totalCalorie)
-  let fatConsumed = 25
+  let fatConsumed = JSON.parse( localStorage.getItem('totalfat' ) );
   let fatLeft = fat-fatConsumed
   let fatPercentage = Math.floor((fatConsumed/fat)*100)
   let carbs = Math.floor((45/100)*totalCalorie)
-  let carbsConsumed = 50
+  let carbsConsumed = JSON.parse( localStorage.getItem('totalcarbs' ) );
   let carbsLeft = carbs - carbsConsumed
   let carbsPercentage = Math.floor((carbsConsumed/carbs)*100)
   let protein = Math.floor((35/100)*totalCalorie)
-  let proteinConsumed = 100
+  let proteinConsumed = JSON.parse( localStorage.getItem('totalprotien' ) );
   let proteinLeft = protein - proteinConsumed
   let proteinPercentage = Math.floor((proteinConsumed/protein)*100)
   
@@ -41,7 +41,7 @@ const Apple = () => {
   return (
     <Box>
       <Flex h="50px" justifyContent={'space-between'}  p='15px'>
-        <Link to='/'>
+        <Link to='/food'>
         <Button
           bgColor={'#9DC6F2'}
           w="60px"
