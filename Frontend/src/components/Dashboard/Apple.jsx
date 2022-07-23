@@ -37,7 +37,7 @@ const Apple = () => {
   let sum = fatPercentage + carbsPercentage + proteinPercentage
   let totalLeft = Math.floor((sum*totalCalorie)/100)
 
-  console.log(sum);
+  // console.log(sum);
   return (
     <Box>
       <Flex h="50px" justifyContent={'space-between'}  p='15px'>

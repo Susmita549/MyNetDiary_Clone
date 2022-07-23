@@ -33,10 +33,10 @@ let litag = [
   { name: 'DASHBOARD', link: 'dashboard/dashboard' },
   { name: 'PLAN', link: '/plan' },
   { name: 'FOOD', link: '/food' },
-  { name: 'EXERCISE', link: '/exercise' },
-  { name: 'ANALYSIS', link: '/analysis' },
-  { name: 'COMMUNITY', link: '/community' },
-  { name: 'SETTINGS', link: '/settings' },
+  { name: 'EXERCISE', link: '' },
+  { name: 'ANALYSIS', link: '' },
+  { name: 'COMMUNITY', link: '' },
+  { name: 'SETTINGS', link: '' },
 ];
 
 const Navbar = () => {
@@ -56,9 +56,7 @@ const Navbar = () => {
 
   const today = new Date();
   let date = today.getDay();
-  console.log(date)
   let todayDate = day[date]
-  console.log(todayDate)
   const [valuee, setValue] = useState(todayDate);
   const handleClickRight = () => {
     if (day.indexOf(valuee) < 7) {
@@ -74,10 +72,8 @@ const Navbar = () => {
     if (day.indexOf(valuee) > 0) {
       let y = day.indexOf(valuee) - 1;
       setValue(day[y]);
-      console.log(y);
     } else {
       let s = day.indexOf(valuee)-1;
-      console.log(s);
     }
   };
 
