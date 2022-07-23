@@ -166,8 +166,36 @@ const SmFoodNew = () => {
     const [brkfat, setBrkFat] = useState(breakfast.fats)
     const [brkfdgrd, setBrkFdgrd] = useState(breakfast.fdgrd)
     const [brkcarbs, setBrkCarbs] = useState(breakfast.carbs)
-
     const [totalCal, setTotalCal] = useState(0)
+    const [totalFat, setTotalFat] = useState(0)
+    const [totalCarbs, setTotalCarbs] = useState(0)
+    const [totalProtien, setTotalProtien] = useState(0)
+
+    console.log(breakfastItems)
+    // const breakfastHandler = e =>{
+    //     setBrkItem(e.label)
+    //     setBrkCalories(e.calories)
+    //     setBrkProtien(e.protien)
+    //     setBrkFat(e.fats)
+    //     setBrkFdgrd(e.fdgrd)
+    //     setBrkCarbs(e.carbs)
+    // }
+    // useEffect(()=>{
+    //     const brkData = localStorage.getItem("breakfastItems");
+    //     if(brkData){
+    //         setBrkItem(JSON.parse(brkData))
+    //         setBrkCalories(JSON.parse(brkData))
+    //         setBrkProtien(JSON.parse(brkData))
+    //         setBrkFat(JSON.parse(brkData))
+    //         setBrkFdgrd(JSON.parse(brkData))
+    //         setBrkCarbs(JSON.parse(brkData))
+    //     }
+    // }, []);
+
+    // useEffect(()=>{
+    //     localStorage.setItem("breakfastItems",JSON.stringify(brkItem,brkcalories,brkprotien,brkfat,brkfdgrd,brkcarbs))
+    // })
+
 
     const breakfastHandler = (e)  =>{
 
@@ -178,13 +206,24 @@ const SmFoodNew = () => {
         setBrkFat(e.fats)
         setBrkFdgrd(e.fdgrd)
         setBrkCarbs(e.carbs)
+        console.log(e)
         brklist.push(e.calories);
         brklist.push(e.fats);
         breakfastItems.push(brklist)
+        console.log(breakfastItems)
+        
+        // breakfastItems.push(breakfastSingle)
+        
         localStorage.setItem("breakfastlist", JSON.stringify(breakfastItems))
         setTotalCal(totalCal + e.calories)
+        setTotalFat(totalFat + e.fats)
+        setTotalCarbs(totalCarbs + e.carbs)
+        setTotalProtien(totalProtien + e.protien)
     }
 
+    const btnAdd = (e)=>{
+      
+    }
 
     const [lunchItem, setlunchItem] = useState(lunch.label)
     const [lunchcalories, setlunchCalories] = useState(lunch.calories)
@@ -200,13 +239,16 @@ const SmFoodNew = () => {
         setlunchFat(e.fats)
         setlunchFdgrd(e.fdgrd)
         setlunchCarbs(e.carbs)
-        
+        console.log(e)
         lunchlist.push(e.calories);
         lunchlist.push(e.fats);
         breakfastItems.push(lunchlist)
-       
+        console.log(breakfastItems)
 localStorage.setItem("breakfastlist", JSON.stringify(breakfastItems))
 setTotalCal(totalCal + e.calories)
+setTotalFat(totalFat + e.fats)
+        setTotalCarbs(totalCarbs + e.carbs)
+        setTotalProtien(totalProtien + e.protien)
     }
     const [dinnerItem, setdinnerItem] = useState(dinner.label)
     const [dinnercalories, setdinnerCalories] = useState(dinner.calories)
@@ -221,14 +263,17 @@ setTotalCal(totalCal + e.calories)
         setdinnerFat(e.fats)
         setdinnerFdgrd(e.fdgrd)
         setdinnerCarbs(e.carbs)
-        
+        console.log(e)
         var dinnerlist = []
         dinnerlist.push(e.calories);
         dinnerlist.push(e.fats);
         breakfastItems.push(dinnerlist)
-        
+        console.log(breakfastItems)
 localStorage.setItem("breakfastlist", JSON.stringify(breakfastItems))
 setTotalCal(totalCal + e.calories)
+setTotalFat(totalFat + e.fats)
+        setTotalCarbs(totalCarbs + e.carbs)
+        setTotalProtien(totalProtien + e.protien)
     }
     const [snacksItem, setsnacksItem] = useState(snacks.label)
     const [snackscalories, setsnacksCalories] = useState(snacks.calories)
@@ -243,13 +288,17 @@ setTotalCal(totalCal + e.calories)
         setsnacksFat(e.fats)
         setsnacksFdgrd(e.fdgrd)
         setsnacksCarbs(e.carbs)
-       
+        console.log(e)
         var dinnerlist = []
         dinnerlist.push(e.calories);
         dinnerlist.push(e.fats);
         breakfastItems.push(dinnerlist)
+        console.log(breakfastItems)
 localStorage.setItem("breakfastlist", JSON.stringify(breakfastItems))
 setTotalCal(totalCal + e.calories)
+setTotalFat(totalFat + e.fats)
+        setTotalCarbs(totalCarbs + e.carbs)
+        setTotalProtien(totalProtien + e.protien)
     }
     const colorStyles ={
         control: (styles) =>({...styles,width:"150px", height:"18px",backgroundColor:"rgb(232,245,233)"}),
@@ -257,8 +306,14 @@ setTotalCal(totalCal + e.calories)
             return {...styles}
         }
     }
-    
+    console.log(totalCal)
+    console.log(totalFat)
+    console.log(totalCarbs)
+    console.log(totalProtien)
     localStorage.setItem("totalcal", JSON.stringify(totalCal))
+    localStorage.setItem("totalfat", JSON.stringify(totalFat))
+    localStorage.setItem("totalcarbs", JSON.stringify(totalCarbs))
+    localStorage.setItem("totalprotien", JSON.stringify(totalProtien))
   return (
     <>
     <div className="main">
