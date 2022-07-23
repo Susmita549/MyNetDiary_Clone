@@ -15,10 +15,12 @@ import Chakraui from './pages/Chakraui';
 import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
+import NewNavbar from './components/NewNavbar';
 function App() {
-return(
+  return (
     <Box textAlign="center" fontSize="xl">
       {/* <Navbar /> */}
+      <NewNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
@@ -37,8 +39,8 @@ return(
 
         <Route path="/chakra" element={<Chakraui />} />
 
-        <Route path="/plan" element={<Plan />} />
-        <Route path="/food" element={<Food />} />
+        {/* <Route path="/plan" element={<Plan />} /> */}
+        {/* <Route path="/food" element={<Food />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Box>

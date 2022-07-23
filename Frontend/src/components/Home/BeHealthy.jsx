@@ -143,7 +143,7 @@ const BeHealthy = () => {
                   >
                     <Image src={data.apple} />
                     {data.rating.map(rating => (
-                      <Image src={rating} h="22" />
+                      <Image key={uuidv4()} src={rating} h="22" />
                     ))}
                     <Text
                       color="#46618a"
@@ -155,7 +155,7 @@ const BeHealthy = () => {
                   <Flex gap={1} alignItems={'center'}>
                     <Image src={data.android} />
                     {data.rating.map(rating => (
-                      <Image src={rating} h="22" />
+                      <Image key={uuidv4()} src={rating} h="22" />
                     ))}
                     <Text
                       color="#46618a"
