@@ -1,4 +1,6 @@
 import React from 'react'
+import Footer from '../components/Dashboard/Footer'
+import Navbar from '../components/Dashboard/Navbar'
 import SmNavbar from '../smComponents/smNavbar/SmNavbar'
 import SmNavPage from '../smComponents/smNavbar/SmNavPage'
 import WeightCalories from '../smComponents/smPages/WeightCalories'
@@ -8,12 +10,12 @@ import SmSidebar from "../smComponents/smSide/SmSidebar"
 const Plan = () => {
   return (
     <>
-      {/* navbar section */}
+    
       <section>
-        <div> <SmNavbar/> </div>
+        <div> <Navbar/> </div>
       </section>
 
-      {/* sidebar section */}
+      
 
       <section>
         <div style = {{ backgroundColor:"rgb(240,240,240)"}}>
@@ -21,15 +23,11 @@ const Plan = () => {
           <div> <WeightCalories />  </div>
           
         </div>
-        {/* <div><WeightCalories /></div> */}
+       
         
       </section>
 
-      {/* navpage section */}
-
-      {/* <section>
-        <div> <SmNavPage /> </div>
-      </section> */}
+      <Footer/>
 
 
     </>
