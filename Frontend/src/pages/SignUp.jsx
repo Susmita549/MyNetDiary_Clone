@@ -668,4 +668,4 @@ const StageThree = ({
     </Box>
   );
 };
-}
+
