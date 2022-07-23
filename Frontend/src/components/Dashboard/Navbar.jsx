@@ -33,10 +33,10 @@ let litag = [
   { name: 'DASHBOARD', link: 'dashboard/dashboard' },
   { name: 'PLAN', link: '/plan' },
   { name: 'FOOD', link: '/food' },
-  { name: 'EXERCISE', link: '/exercise' },
-  { name: 'ANALYSIS', link: '/analysis' },
-  { name: 'COMMUNITY', link: '/community' },
-  { name: 'SETTINGS', link: '/settings' },
+  { name: 'EXERCISE', link: '' },
+  { name: 'ANALYSIS', link: '' },
+  { name: 'COMMUNITY', link: '' },
+  { name: 'SETTINGS', link: '' },
 ];
 
 const Navbar = () => {
@@ -44,6 +44,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [value, onChange] = useState(new Date());
   const day = [
+    '',
     'Monday',
     'Tuesday',
     'Wednesday',
@@ -54,12 +55,11 @@ const Navbar = () => {
   ];
 
   const today = new Date();
-  let date = today.getDate();
-  let x = Math.floor(date / 7) + 1;
-  let todayDate = day[x];
+  let date = today.getDay();
+  let todayDate = day[date]
   const [valuee, setValue] = useState(todayDate);
   const handleClickRight = () => {
-    if (day.indexOf(valuee) < 6) {
+    if (day.indexOf(valuee) < 7) {
       let y = day.indexOf(valuee) + 1;
       setValue(day[y]);
       console.log(y);
@@ -72,10 +72,8 @@ const Navbar = () => {
     if (day.indexOf(valuee) > 0) {
       let y = day.indexOf(valuee) - 1;
       setValue(day[y]);
-      console.log(y);
     } else {
-      let s = Math.floor(Math.abs(day.indexOf(valuee)));
-      console.log(s);
+      let s = day.indexOf(valuee)-1;
     }
   };
 
