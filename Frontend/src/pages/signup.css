@@ -26,7 +26,7 @@ position: relative;
 z-index: 1;
 }
 .first_layer{
-  height: 480px;
+  height: 500px;
   position: 'relative';
   background-image: url("https://www.mynetdiary.com/images/bg-start-signup@1x.png");
   background-size: 100% 100%;

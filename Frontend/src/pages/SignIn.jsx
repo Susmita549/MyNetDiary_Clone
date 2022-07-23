@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaFacebookSquare } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
+import { AiOutlineApple } from 'react-icons/ai';
 import {
   Box,
   Flex,
@@ -23,7 +26,21 @@ const SignIn = () => {
 
   const isError = input === '';
   const passError = pass === '';
-
+  const hndlesignIn = () => {
+    let payload = {
+      email: input,
+      pass: pass,
+    };
+    fetch('http://localhost:5000/login', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+      .then(res => res.json())
+      .then(d => console.log(d));
+  };
   return (
     <>
       <Box className="main">
@@ -81,7 +98,7 @@ const SignIn = () => {
               </FormControl>
               <Flex gap="1rem" margin="1.5rem 0rem 1.5rem 0">
                 <Stack spacing={4} direction="row" align="center">
-                  <Button colorScheme="teal" size="lg">
+                  <Button colorScheme="teal" size="lg" onClick={hndlesignIn}>
                     SignIn
                   </Button>
                 </Stack>
@@ -97,18 +114,48 @@ const SignIn = () => {
                 padding=".7rem"
                 borderRadius=".5rem"
                 cursor="pointer"
+                margin="1rem 0rem 1rem 0rem"
               >
                 <span>
-                  <Image
-                    src="../assets/homepage/footer/fb.svg"
-                    bg="white"
-                    padding="0.1rem .5rem 0.1rem .5rem"
-                  />
+                  <FaFacebookSquare color="white" fontSize="2rem" />
                 </span>
                 <span style={{ color: 'white' }}>SIGN IN WITH FACEBOOK</span>
               </Flex>
+              <Flex
+                gap="1rem"
+                bg="#4285f4"
+                padding=".7rem"
+                borderRadius=".5rem"
+                cursor="pointer"
+                margin="1rem 0rem 1rem 0rem"
+              >
+                <span style={{ backgroundColor: 'white' }}>
+                  <FcGoogle fontSize="2rem" color="white" />
+                </span>
+                <span style={{ color: 'white' }}>SIGN IN WITH GOOGLE</span>
+              </Flex>
+              <Flex
+                gap="1rem"
+                bg="black"
+                padding=".7rem"
+                borderRadius=".5rem"
+                cursor="pointer"
+                margin="1rem 0rem 1rem 0rem"
+              >
+                <span>
+                  <AiOutlineApple fontSize="2rem" color="white" bg="white" />
+                </span>
+                <span style={{ color: 'white' }}>SIGN IN WITH APPLE</span>
+              </Flex>
             </Box>
           </Flex>
+          <Box fontWeight="500" fontSize="1.5rem">
+            no account{' '}
+            <span style={{ color: 'teal', cursor: 'pointer' }} onClick={'#'}>
+              SignUp
+            </span>
+            , it's easy
+          </Box>
         </Box>
       </Box>
       <Flex
