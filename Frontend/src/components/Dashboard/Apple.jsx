@@ -88,6 +88,7 @@ const Apple = () => {
             <Text fontSize="md">{fatPercentage}% calorie</Text>
           </Flex>
           <Box>
+
             <Stack spacing={5} py='10px'>
               <Progress colorScheme="green" size="md" value={fatPercentage} />
             </Stack>
@@ -95,6 +96,7 @@ const Apple = () => {
           <Flex justifyContent="space-between">
             <Text fontSize="md">{fatConsumed}g</Text>
             <Text fontSize="md">left {fatLeft}gm</Text>
+
           </Flex>
         </Box>
 

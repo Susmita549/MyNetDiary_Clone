@@ -20,6 +20,16 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useParams, Link, useNavigate } from 'react-router-dom';
+
+import icon1 from '../assets/dietpage/CalorieCounting.svg';
+import icon2 from '../assets/dietpage/Low-cardDiet.svg';
+import icon3 from '../assets/dietpage/KetoDiet.svg';
+import icon4 from '../assets/dietpage/HighProteinDiet.svg';
+import icon5 from '../assets/dietpage/LowfatDiet.svg';
+import icon6 from '../assets/dietpage/MediterraneamDiet.svg';
+import icon7 from '../assets/dietpage/VegeterianDiet.svg';
+import icon8 from '../assets/dietpage/VeganDiet.svg';
+
 import allData from '../db.json';
 
 const Diets = () => {
@@ -27,10 +37,12 @@ const Diets = () => {
     allData.dietsLibrary.caloriesCounting
   );
   const [selected, setSelected] = useState('');
+  const navigate = useNavigate();
+  const { subcategory } = useParams();
+  // console.log('path:', subcategory);
   // console.log(porductsData);
-  const handleUpdateData = value => {
-    // console.log(value);
-    switch (value) {
+  const setData = path => {
+    switch (path) {
       case 'diet-library':
         return setProductsData(allData.dietsLibrary.caloriesCounting);
 
@@ -59,6 +71,10 @@ const Diets = () => {
         return setProductsData(allData.dietsLibrary.caloriesCounting);
     }
   };
+
+  useEffect(() => {
+    setData(subcategory);
+  }, [subcategory]);
   return (
     <Box p={'0 40px'} borderLeft={'100px'} width={'100%'}>
       <Flex>
@@ -92,7 +108,14 @@ const Diets = () => {
                           }}
                           onClick={() => {
                             setSelected(item.category);
-                            handleUpdateData(item.path);
+                            // handleUpdateData(item.path);
+                            if (item.path === 'dietitians-blog') {
+                              navigate(`/library/dietitians-blog/${item.path}`);
+                            } else if (item.path === 'dietitian-team') {
+                              navigate(`/library/dietitian-team/${item.path}`);
+                            } else {
+                              navigate(`/library/diets/${item.path}`);
+                            }
                           }}
                           cursor="pointer"
                         >
@@ -116,7 +139,9 @@ const Diets = () => {
                           _hover={{ textDecoration: 'underline' }}
                           onClick={() => {
                             setSelected(subItem.item);
-                            handleUpdateData(subItem.subpath);
+                            // handleUpdateData(subItem.subpath);
+
+                            navigate(`/library/diets/${subItem.subpath}`);
                           }}
                           cursor="pointer"
                         >
@@ -266,42 +291,42 @@ const sideMenu = [
       {
         subpath: 'Calorie-Counting',
         item: 'Calorie Counting',
-        logo: './assets/dietpage/CalorieCounting.svg',
+        logo: icon1,
       },
       {
         subpath: 'Low-Carb-Diet',
         item: 'Low-Carb Diet',
-        logo: './assets/dietpage/Low-cardDiet.svg',
+        logo: icon2,
       },
       {
         subpath: 'Keto-Diet',
         item: 'Keto Diet',
-        logo: './assets/dietpage/KetoDiet.svg',
+        logo: icon3,
       },
       {
         subpath: 'High-Protein-Diet',
         item: 'High-Protein Diet',
-        logo: './assets/dietpage/HighProteinDiet.svg',
+        logo: icon4,
       },
       {
         subpath: 'Low-Fat-Diet',
         item: 'Low-Fat Diet',
-        logo: './assets/dietpage/LowfatDiet.svg',
+        logo: icon5,
       },
       {
         subpath: 'Mediterranean-Diet',
         item: 'Mediterranean Diet',
-        logo: './assets/dietpage/MediterraneamDiet.svg',
+        logo: icon6,
       },
       {
         subpath: 'Vegetarian-Diet',
         item: 'Vegetarian Diet',
-        logo: './assets/dietpage/VegeterianDiet.svg',
+        logo: icon7,
       },
       {
         subpath: 'Vegan-Diet',
         item: 'Vegan Diet',
-        logo: './assets/dietpage/VeganDiet.svg',
+        logo: icon8,
       },
     ],
   },
