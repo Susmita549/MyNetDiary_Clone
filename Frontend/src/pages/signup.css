@@ -6,7 +6,7 @@
     /* bottom: 16%; */
     /* left: -3%; */
     width: 107%;
-    height: 100%;
+    height: 600px;
     left: -5rem;
     right: -5rem;
     background: url(https://www.mynetdiary.com/images/texture-noise@1x.png),radial-gradient(ellipse at top, #05b24a 0%, #05963d 60%);
@@ -26,7 +26,7 @@ position: relative;
 z-index: 1;
 }
 .first_layer{
-  height: 480px;
+  height: 500px;
   position: 'relative';
   background-image: url("https://www.mynetdiary.com/images/bg-start-signup@1x.png");
   background-size: 100% 100%;

@@ -15,18 +15,8 @@ import Chakraui from './pages/Chakraui';
 import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
-
 function App() {
-  const total = {
-    totalFat: 70,
-    completedFat: 10,
-    totalCarbs: 130,
-    completedCarbs: 5,
-    totalProtin: 200,
-    completedProtin: 10,
-  };
-  localStorage.setItem('total', JSON.stringify(total));
-  return (
+
     <Box textAlign="center" fontSize="xl">
       {/* <Navbar /> */}
       <Routes>

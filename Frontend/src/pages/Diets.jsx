@@ -177,7 +177,7 @@ const Diets = () => {
           lineHeight={1.5}
           pl="10px"
         >
-          <Box mb="30px" fontSize="18px">
+          <Box mb="30px" fontSize="18px" fontWeight={"500"}>
             {porductsData.message ? porductsData.message : ''}
           </Box>
           {porductsData &&
@@ -197,13 +197,11 @@ const Diets = () => {
                   width={'100%'}
                   templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
                   gap={['2rem', '3rem', '5rem']}
-                  // border={'1px solid green'}
                   borderColor={'#eaeaea'}
                 >
                   {product.data?.map(item => (
                     <Box
                       key={item.id}
-                      // marginBottom={'4rem'}
                       fontSize={'16px'}
                       borderRadius={'15px'}
                       display={'flex'}
@@ -212,7 +210,6 @@ const Diets = () => {
                       backgroundColor={'#fff'}
                       fontWeight={'400'}
                       color={'#46618a'}
-                      // lineHeight={'1rem'}
                       textAlign="left"
                       boxShadow={'rgb(219 213 208 / 78%) 0 3px 6px'}
                     >
@@ -241,7 +238,7 @@ const Diets = () => {
                               as="h4"
                               color={'#268fd0'}
                               fontSize="22px"
-                              fontWeight={700}
+                              fontWeight={'700'}
                             >
                               {item?.specialist}
                             </Heading>
@@ -267,7 +264,7 @@ const Diets = () => {
                             ''
                           )}
 
-                          <Text fontSize="18px" mt="10px">
+                          <Text fontSize="18px" mt="10px" fontWeight="500">
                             {item.description}
                           </Text>
                         </Box>
