@@ -16,14 +16,14 @@ import Plan from './pages/Plan';
 import Food from './pages/Food';
 import Dashboard from './pages/Dashboard';
 function App() {
-return(
+  return (
     <Box textAlign="center" fontSize="xl">
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/library" element={<Library />} />
+        <Route path="/library/diets" element={<Library />} />
         <Route path="/library/diets/:subcategory" element={<Library />} />
         <Route
           path="/library/dietitian-team/:subcategory"

@@ -76,7 +76,7 @@ const Diets = () => {
     setData(subcategory);
   }, [subcategory]);
   return (
-    <Box p={'0 40px'} borderLeft={'100px'} width={'100%'}>
+    <Box p={'0 40px'} borderLeft={'100px'} width={'100%'} mt="75px">
       <Flex>
         <Box width={'35%'} pr="10px">
           <Accordion allowToggle>
@@ -177,7 +177,7 @@ const Diets = () => {
           lineHeight={1.5}
           pl="10px"
         >
-          <Box mb="30px" fontSize="18px" fontWeight={"500"}>
+          <Box mb="30px" fontSize="18px" fontWeight={'500'}>
             {porductsData.message ? porductsData.message : ''}
           </Box>
           {porductsData &&

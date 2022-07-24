@@ -24,9 +24,10 @@ import icon5 from '../assets/dietpage/LowfatDiet.svg';
 import icon6 from '../assets/dietpage/MediterraneamDiet.svg';
 import icon7 from '../assets/dietpage/VegeterianDiet.svg';
 import icon8 from '../assets/dietpage/VeganDiet.svg';
-import { Link } from 'react-router-dom';
-const NewNavbar = () => {
-  // const { isOpen, onOpen, onClose } = useDisclosure();
+import homeLogo from '../assets/homepage/nav/logo-dark.svg';
+import { Link, useNavigate } from 'react-router-dom';
+const Navbar = () => {
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -46,9 +47,7 @@ const NewNavbar = () => {
             height={'50px'}
             width="220px"
             display={'block'}
-            background={
-              'url(./assets/homepage/nav/logo-dark.svg) 50% 50% no-repeat'
-            }
+            background={`url(${homeLogo}) 50% 50% no-repeat`}
             backgroundSize={'contain'}
             marginBottom="5px"
           ></Box>
@@ -98,12 +97,7 @@ const NewNavbar = () => {
                           : ''
                       }
                     >
-                      <MenuButton
-                        zIndex={10}
-                        as="button"
-                        colorScheme="red"
-                        onClick={() => console.log(isOpen)}
-                      >
+                      <MenuButton zIndex={10} as="button" colorScheme="red">
                         <Text color={isOpen ? '#ff8e3e' : ''}>
                           {navItem.label}
                         </Text>
@@ -120,23 +114,59 @@ const NewNavbar = () => {
                           minW={'18rem'}
                         >
                           {navItem.children.map(child => (
-                            <MenuItem
-                              key={uuidv4()}
-                              rounded="5px"
-                              fontSize={'xl'}
-                              _hover={{
-                                background: '#ff8e3e',
-                                color: 'white',
-                              }}
-                              icon={
-                                child.icon ? '' : <CircleIcon boxSize={2} />
-                              }
-                            >
-                              {child.icon && (
-                                <Image src={child.icon} ml="-5px" mr="10px" />
+                            <>
+                              {child.href ? (
+                                <Link to={child.href}>
+                                  <MenuItem
+                                    key={uuidv4()}
+                                    rounded="5px"
+                                    fontSize={'xl'}
+                                    _hover={{
+                                      background: '#ff8e3e',
+                                      color: 'white',
+                                    }}
+                                    icon={
+                                      child.icon ? (
+                                        ''
+                                      ) : (
+                                        <CircleIcon boxSize={2} />
+                                      )
+                                    }
+                                  >
+                                    {child.icon && (
+                                      <Image
+                                        src={child.icon}
+                                        ml="-5px"
+                                        mr="10px"
+                                      />
+                                    )}
+                                    {child.label}
+                                  </MenuItem>
+                                </Link>
+                              ) : (
+                                <MenuItem
+                                  key={uuidv4()}
+                                  rounded="5px"
+                                  fontSize={'xl'}
+                                  _hover={{
+                                    background: '#ff8e3e',
+                                    color: 'white',
+                                  }}
+                                  icon={
+                                    child.icon ? '' : <CircleIcon boxSize={2} />
+                                  }
+                                >
+                                  {child.icon && (
+                                    <Image
+                                      src={child.icon}
+                                      ml="-5px"
+                                      mr="10px"
+                                    />
+                                  )}
+                                  {child.label}
+                                </MenuItem>
                               )}
-                              {child.label}
-                            </MenuItem>
+                            </>
                           ))}
                         </MenuList>
                       )}
@@ -167,6 +197,9 @@ const NewNavbar = () => {
                 backgroundColor:
                   'linear-gradient(to bottom,#ff845 0,#ff9945 100%)',
               }}
+              onClick={() => {
+                navigate('/signup');
+              }}
             >
               SIGN UP
             </Button>
@@ -195,6 +228,9 @@ const NewNavbar = () => {
                 borderColor: '#0bb850',
                 backgroundColor: '#0bb850',
               }}
+              onClick={() => {
+                navigate('/signin');
+              }}
             >
               SIGN IN
             </Button>
@@ -205,7 +241,7 @@ const NewNavbar = () => {
   );
 };
 
-export default NewNavbar;
+export default Navbar;
 
 const CircleIcon = props => (
   <Icon viewBox="0 0 200 200" {...props}>
@@ -222,22 +258,22 @@ const NAV_ITEMS = [
     children: [
       {
         label: 'iPhone & iPad app',
-        href: '#',
+        href: '',
       },
       {
         label: 'Android app',
-        href: '#',
+        href: '',
       },
       {
         label: 'User Reviews',
-        href: '#',
+        href: '',
       },
       {
         label: 'MyNetDiary vs MyFitnessPal',
-        href: '#',
+        href: '',
       },
     ],
-    href: '#',
+    href: '',
   },
   {
     label: 'Diets',
@@ -245,61 +281,61 @@ const NAV_ITEMS = [
     children: [
       {
         label: 'Calorie Counting',
-        href: '#',
+        href: '',
         icon: icon1,
       },
       {
         label: 'Low-Carb',
-        href: '#',
+        href: '',
         icon: icon2,
       },
       {
         label: 'Keto',
-        href: '#',
+        href: '',
         icon: icon3,
       },
       {
         label: 'High-Protein',
-        href: '#',
+        href: '',
         icon: icon4,
       },
       {
         label: 'Low-Fat',
-        href: '#',
+        href: '',
         icon: icon5,
       },
       {
         label: 'Mediterranean',
-        href: '#',
+        href: '',
         icon: icon6,
       },
       {
         label: 'Vegetarian',
-        href: '#',
+        href: '',
         icon: icon7,
       },
       {
         label: 'Vegan',
-        href: '#',
+        href: '',
         icon: icon8,
       },
     ],
   },
   {
     label: 'Library',
-    href: '',
+    href: '/library',
     children: [
       {
         label: 'Weight Loss Blog',
-        href: '#',
+        href: '/library/dietitians-blog/dietitians-blog',
       },
       {
         label: 'Diet Library',
-        href: '#',
+        href: '/library/diets/diet-library',
       },
       {
         label: 'Dietitian team',
-        href: '#',
+        href: '/library/dietitian-team/dietitian-team',
       },
     ],
   },
@@ -309,11 +345,11 @@ const NAV_ITEMS = [
     children: [
       {
         label: 'Food Search',
-        href: '#',
+        href: '',
       },
       {
         label: 'Database Licensing & API',
-        href: '#',
+        href: '',
       },
     ],
   },
@@ -323,23 +359,23 @@ const NAV_ITEMS = [
     children: [
       {
         label: 'Find Healthcare Professional',
-        href: '#',
+        href: '',
       },
       {
         label: 'For Healthcare Professionals',
-        href: '#',
+        href: '',
       },
       {
         label: 'For Trainers and Clubs',
-        href: '#',
+        href: '',
       },
       {
         label: 'MyNetDiary vs MyFitnessPal',
-        href: '#',
+        href: '',
       },
       {
         label: 'Food Database Licensing',
-        href: '#',
+        href: '',
       },
     ],
   },

@@ -10,10 +10,12 @@ import CalorieCounter from '../components/Home/CalorieCounter';
 import Footer from '../components/Footer';
 import WomenHelthSection from '../components/Home/WomenHelthSection';
 import BeHealthy from '../components/Home/BeHealthy';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
     <Box>
+      <Navbar />
       <BeHealthy />
       <WomenHelthSection />
       <InsightsCards />
