@@ -19,7 +19,6 @@ import NewNavbar from './components/NewNavbar';
 function App() {
   return (
     <Box textAlign="center" fontSize="xl">
-      {/* <Navbar /> */}
       <NewNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,12 +34,12 @@ function App() {
           path="/library/dietitians-blog/:subcategory"
           element={<Library />}
         />
-        {/* <Route path="/diets" element={<Diets />} /> */}
+        
 
         <Route path="/chakra" element={<Chakraui />} />
 
-        {/* <Route path="/plan" element={<Plan />} /> */}
-        {/* <Route path="/food" element={<Food />} /> */}
+        <Route path="/plan" element={<Plan />} />
+        <Route path="/food" element={<Food />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Box>
