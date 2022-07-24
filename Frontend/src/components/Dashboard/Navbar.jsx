@@ -30,7 +30,7 @@ import 'react-calendar/dist/Calendar.css';
 import { Link } from 'react-router-dom';
 
 let litag = [
-  { name: 'DASHBOARD', link: 'dashboard/dashboard' },
+  { name: 'DASHBOARD', link: '/dashboard' },
   { name: 'PLAN', link: '/plan' },
   { name: 'FOOD', link: '/food' },
   { name: 'EXERCISE', link: '' },
