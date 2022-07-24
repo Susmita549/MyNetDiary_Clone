@@ -1,12 +1,14 @@
 .Sidebar{
     height:100%;
     width:280px;
-    max-width: 280px;
+   
     background-color:rgb(240,240,240);
     box-sizing: border-box;
+    margin-top:50px;
+    margin-left:130px;
 }
 
-.icon-style{
+.iconStyle{
     height:30px;
     width:30px;
 }
@@ -30,7 +32,7 @@
     background-color: rgb(206,206,206);
 }
 
-.img-icon{
+.imgIcon{
     flex:20%;
     display:grid;
     align-items: center;

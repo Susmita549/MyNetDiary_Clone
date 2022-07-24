@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import "./SmFoodNew.css"
+import styles from "./SmFoodNew.module.css"
 import {FaSearch, FaStar} from "react-icons/fa"
 import Select from "react-select"
 
@@ -172,29 +172,6 @@ const SmFoodNew = () => {
     const [totalProtien, setTotalProtien] = useState(0)
 
     console.log(breakfastItems)
-    // const breakfastHandler = e =>{
-    //     setBrkItem(e.label)
-    //     setBrkCalories(e.calories)
-    //     setBrkProtien(e.protien)
-    //     setBrkFat(e.fats)
-    //     setBrkFdgrd(e.fdgrd)
-    //     setBrkCarbs(e.carbs)
-    // }
-    // useEffect(()=>{
-    //     const brkData = localStorage.getItem("breakfastItems");
-    //     if(brkData){
-    //         setBrkItem(JSON.parse(brkData))
-    //         setBrkCalories(JSON.parse(brkData))
-    //         setBrkProtien(JSON.parse(brkData))
-    //         setBrkFat(JSON.parse(brkData))
-    //         setBrkFdgrd(JSON.parse(brkData))
-    //         setBrkCarbs(JSON.parse(brkData))
-    //     }
-    // }, []);
-
-    // useEffect(()=>{
-    //     localStorage.setItem("breakfastItems",JSON.stringify(brkItem,brkcalories,brkprotien,brkfat,brkfdgrd,brkcarbs))
-    // })
 
 
     const breakfastHandler = (e)  =>{
@@ -316,24 +293,24 @@ setTotalFat(totalFat + e.fats)
     localStorage.setItem("totalprotien", JSON.stringify(totalProtien))
   return (
     <>
-    <div className="main">
-        <div className="top">
+    <div className={styles.main}>
+        <div className={styles.top}>
             <FaSearch style ={{fontSize:"24px", color:"grey",margin:"30px 10px 10px 20px"}} />
             <FaStar style = {{fontSize:"24px", color:"grey",margin:"30px 10px 10px 20px"}} />
-            <img  className="img" src="https://s3.amazonaws.com/img.mynetdiary.com/premiumrecipe/ic_premium_recipes.png" style = {{height:"24px", width:"24px"}}  />
+            <img  className={styles.img} src="https://s3.amazonaws.com/img.mynetdiary.com/premiumrecipe/ic_premium_recipes.png" style = {{height:"24px", width:"24px"}}  />
             
-            <p className="cmd">Consumed Food</p>
-            <p className="cl">Calories count</p>
-            <p className="ft">Fats</p>
-            <p className="ptn">Protien</p>
-            <p className="fdg">Fd Grade</p>
-            <p className="cbs">Carbs</p>
+            <p className={styles.cmd}>Consumed Food</p>
+            <p className={styles.cl}>Calories count</p>
+            <p className={styles.ft}>Fats</p>
+            <p className={styles.ptn}>Protien</p>
+            <p className={styles.fdg}>Fd Grade</p>
+            <p className={styles.cbs}>Carbs</p>
         </div>
-        <div className="brkfst">
-            <p className="p1">BREAKFAST</p><br/>
-            <Select className = "selStyles" styles = {colorStyles} onChange = {breakfastHandler} options = {breakfast} />
+        <div className={styles.brkfst}>
+            <p className={styles.p1}>BREAKFAST</p><br/>
+            <Select className = {styles.selStyles} styles = {colorStyles} onChange = {breakfastHandler} options = {breakfast} />
             {/* <button id="btn1">ADD</button> */}
-            <div className="inr" id="inr">
+            <div className={styles.inr} >
                 <h1 style = {{margin:"30px -40px 0px 30px", height:"30px", width:"150px"}}>{brkItem}</h1>
                 <h1 style = {{margin:"30px -40px 0px 180px"}}>{brkcalories}</h1>
                 <h1 style = {{margin:"30px -40px 0px 170px"}}>{brkfat}</h1>
@@ -344,11 +321,11 @@ setTotalFat(totalFat + e.fats)
         </div>
         <br />
         <br />
-        <div className="brkfst">
-            <p className="p1">LUNCH</p>
-            <Select className = "selStyles" styles = {colorStyles} onChange = {lunchHandler} options = {lunch} />
+        <div className={styles.brkfst}>
+            <p className={styles.p1}>LUNCH</p>
+            <Select className = {styles.selStyles} styles = {colorStyles} onChange = {lunchHandler} options = {lunch} />
             {/* <button id="btn1">ADD</button> */}
-            <div className="inr" id="inr">
+            <div className={styles.inr} >
                 <h1 style = {{margin:"30px -40px 0px 30px", height:"30px", width:"150px"}}>{lunchItem}</h1>
                 <h1 style = {{margin:"30px -40px 0px 180px"}}>{lunchcalories}</h1>
                 <h1 style = {{margin:"30px -40px 0px 170px"}}>{lunchfat}</h1>
@@ -360,11 +337,11 @@ setTotalFat(totalFat + e.fats)
          <br />
         <br />
 
-        <div className="brkfst">
-            <p className="p1">DINNER</p>
-            <Select className = "selStyles" styles = {colorStyles} onChange = {dinnerHandler} options = {dinner} />
+        <div className={styles.brkfst}>
+            <p className={styles.p1}>DINNER</p>
+            <Select className = {styles.selStyles} styles = {colorStyles} onChange = {dinnerHandler} options = {dinner} />
             {/* <button id="btn1">ADD</button> */}
-            <div className="inr" id="inr">
+            <div className={styles.inr} >
                 <h1 style = {{margin:"30px -40px 0px 30px", height:"30px", width:"150px"}}>{dinnerItem}</h1>
                 <h1 style = {{margin:"30px -40px 0px 180px"}}>{dinnercalories}</h1>
                 <h1 style = {{margin:"30px -40px 0px 170px"}}>{dinnerfat}</h1>
@@ -375,11 +352,11 @@ setTotalFat(totalFat + e.fats)
         </div>
          <br />
         <br />
-        <div className="brkfst">
-            <p className="p1">SNACKS</p>
-            <Select className = "selStyles" styles = {colorStyles} onChange = {snacksHandler} options = {snacks} />
+        <div className={styles.brkfst}>
+            <p className={styles.p1}>SNACKS</p>
+            <Select className = {styles.selStyles} styles = {colorStyles} onChange = {snacksHandler} options = {snacks} />
             {/* <button id="btn1">ADD</button> */}
-            <div className="inr" id="inr">
+            <div className={styles.inr} >
                 <h1 style = {{margin:"30px -40px 0px 30px", height:"30px", width:"150px"}}>{snacksItem}</h1>
                 <h1 style = {{margin:"30px -40px 0px 180px"}}>{snackscalories}</h1>
                 <h1 style = {{margin:"30px -40px 0px 170px"}}>{snacksfat}</h1>
@@ -396,9 +373,9 @@ setTotalFat(totalFat + e.fats)
                 <p>DAY LOG</p>
             </div>
         </div> */}
-        <div>
-            Total Calories:{totalCal}
-        </div>
+        <span style ={{fontSize:"20px", backgroundColor:"greenyellow"}}>
+            Total Calories:<span style = {{color:"red"}}>{totalCal}</span>
+        </span>
    </div>
     </>
   )
