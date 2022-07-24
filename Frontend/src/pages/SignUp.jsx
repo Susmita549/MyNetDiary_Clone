@@ -16,8 +16,9 @@ import {
   RadioGroup,
 } from '@chakra-ui/react';
 import './signup.css';
-
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
+  const navigate = useNavigate();
   const [selectedStage, setSelectedStage] = useState(1);
   const [one, setOne] = useState({});
   const [two, setTwo] = useState({});
@@ -31,7 +32,7 @@ const SignUp = () => {
     });
     // console.log(form);
     if (form !== {}) {
-      fetch('http://localhost:5000/signup', {
+      fetch('https://mynetdiary-clone.herokuapp.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +40,10 @@ const SignUp = () => {
         body: JSON.stringify(form),
       })
         .then(res => res.json())
-        .then(d => console.log(d));
+        .then(d => {
+          console.log(d);
+          navigate('/signin');
+        });
     }
   };
 
