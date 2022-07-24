@@ -18,7 +18,7 @@ import Dashboard from './pages/Dashboard';
 function App() {
 return(
     <Box textAlign="center" fontSize="xl">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
