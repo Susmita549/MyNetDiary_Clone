@@ -1,5 +1,5 @@
 import React from 'react'
-import "./SmSidebar.css"
+import styles from "./SmSidebar.module.css"
 import {SmSidebarData} from "./SmSidebarData"
 import {NavLink} from "react-router-dom"
 
@@ -7,17 +7,17 @@ const SmSidebar = () => {
   return (
     <>
       <section>
-        <div className = "Sidebar">
+        <div className = {styles.Sidebar}>
           {SmSidebarData.map((elem)=>{
             return(
               <>
                <div key = {elem.id} >
-               <NavLink to = {elem.path} className = "row">
-                  <div className = "img-icon">
-                    <img src = {elem.icon} className = "icon-style"  />
+               <NavLink to = {elem.path}  className = {styles.row}>
+                  <div className = {styles.imgIcon}>
+                    <img src = {elem.icon} className = {styles.iconStyle}  />
                   </div>
-                  <div className = "titleDiv">
-                    <p className = "titleP">{elem.title}</p>
+                  <div className = {styles.titleDiv}>
+                    <p className = {styles.titleP}>{elem.title}</p>
                   </div>
                 </NavLink>
                </div>
