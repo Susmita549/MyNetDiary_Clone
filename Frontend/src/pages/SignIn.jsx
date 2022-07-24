@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import './signup.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
   const [input, setInput] = useState('');
@@ -22,7 +23,7 @@ const SignIn = () => {
 
   const handleInputChange = e => setInput(e.target.value);
   const handlePassChange = e => setPass(e.target.value);
-
+  const navigate = useNavigate();
   const isError = input === '';
   const passError = pass === '';
   const hndlesignIn = () => {
@@ -41,6 +42,7 @@ const SignIn = () => {
       .then(d => {
         localStorage.setItem('logindata', JSON.stringify(d));
         console.log(d);
+        navigate('/dashboard');
       });
   };
   return (
