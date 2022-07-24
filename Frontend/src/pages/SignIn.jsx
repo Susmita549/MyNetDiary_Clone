@@ -7,7 +7,6 @@ import {
   Flex,
   Stack,
   Button,
-  Image,
   FormControl,
   FormLabel,
   Input,
@@ -31,7 +30,7 @@ const SignIn = () => {
       email: input,
       pass: pass,
     };
-    fetch('http://localhost:5000/login', {
+    fetch('https://mynetdiary-clone.herokuapp.com/login', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -39,7 +38,10 @@ const SignIn = () => {
       body: JSON.stringify(payload),
     })
       .then(res => res.json())
-      .then(d => console.log(d));
+      .then(d => {
+        localStorage.setItem('logindata', JSON.stringify(d));
+        console.log(d);
+      });
   };
   return (
     <>
@@ -151,10 +153,8 @@ const SignIn = () => {
           </Flex>
           <Box fontWeight="500" fontSize="1.5rem">
             no account{' '}
-            <span style={{ color: 'teal', cursor: 'pointer' }} onClick={'#'}>
-              SignUp
-            </span>
-            , it's easy
+            <span style={{ color: 'teal', cursor: 'pointer' }}>SignUp</span>,
+            it's easy
           </Box>
         </Box>
       </Box>
