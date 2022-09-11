@@ -45,7 +45,7 @@ Start the localhost server
 [https://mynetdiary-website-clone.netlify.app/](https://mynetdiary-website-clone.netlify.app/)
 
 Contributors:-
-Ramesh
-Samrat
-Sashi Ranjan
-Rahul
+● Ramesh
+● Samrat
+● Sashi Ranjan
+● Rahul
