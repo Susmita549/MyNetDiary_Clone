@@ -1,5 +1,7 @@
 # “mynetdiary.com” Website Clone
 
+MyNetDiary is a diet app that focuses on calorie tracking. Users begin by setting a weight goal and viewing the advice and tips that the app provides. Users can then track their food by searching the app's database or scanning a barcode with the built-in scanner.
+
 ## Technologies we used
 
 [![React](<https://img.shields.io/badge/React_(17.0.2)-20232A?style=for-the-badge&logo=react&logoColor=61DAFB>)](https://reactjs.org/)
